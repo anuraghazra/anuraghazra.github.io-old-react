@@ -5,7 +5,7 @@ const Hexagon = ({icon}) => {
   return (
     <HexagonWrapper>
       <div className="hexagon">
-        <i className={`fa fa-2x ${icon}`}></i>
+        <i className={icon}></i>
       </div>
     </HexagonWrapper>
   )

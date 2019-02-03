@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import media from '../helpers/media.style';
 
 export default styled.div`
+position: relative;
   width : 100%;
   margin : 0 auto;
   text-align: center;

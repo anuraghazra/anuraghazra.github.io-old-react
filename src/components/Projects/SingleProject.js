@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import FakeBrowser from '../FakeBrowser';
 
 const GitLinksWrapper = styled.div`
-  margin-top : 30px;
+  margin-top : 2rem;
   width: 100%;
   display: flex;
   justify-content: space-evenly;

@@ -26,6 +26,10 @@ const CCWrapper = styled.div`
     border-radius: 0.25rem;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     overflow: hidden;
+    &:hover img {
+      transform: scale(1.2);
+      transition: 0.3s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+    }
   }
 
   .card__content {
@@ -39,16 +43,10 @@ const CCWrapper = styled.div`
   .card__image {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-    filter: contrast(70%);
-    overflow: hidden;
     position: relative;
     height: 300px;
-    transition: filter 0.3s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+    overflow: hidden;
     
-    :hover {
-      filter: contrast(100%);
-      filter: contrast(100%);
-    }
     div {
       border-radius : 0;
     }
@@ -58,29 +56,26 @@ const CCWrapper = styled.div`
       position: absolute;
       top: 0px;
       left: 0px;
+      transform: scale(1.0);
+      transition: 0.3s cubic-bezier(0.43, 0.41, 0.22, 0.91);
     }
+
   }
 
   .card__title {
     color: #696969;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: bold;
     letter-spacing: 5px;
     text-transform: uppercase;
   }
 
-  .card__text {
-    color: black;
-    flex: 1 1 auto;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-  }
 
   .card__links {
+    font-size : 0.8em;
     div {
       padding: 0;
-      margin : 20px 0 0;
+      margin : 1rem 0 0;
       border: none;
     }
     a {
@@ -155,7 +150,7 @@ class CCProjects extends Component {
       .catch(error => {
         console.log(error)
         this.setState({ error: true });
-      })
+      });
   }
 
   render() {
@@ -163,9 +158,7 @@ class CCProjects extends Component {
       <CCWrapper id={this.props.id}>
         {
           this.state.data.map((data, i) => {
-            return (
-              <CC key={i} {...data} />
-            )
+            return (<CC key={i} {...data} />)
           })
         }
         {this.state.error && <h3 className='error'>Somehting Went Wrong! Please Reload the Page</h3>}

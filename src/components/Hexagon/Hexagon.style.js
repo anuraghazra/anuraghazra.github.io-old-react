@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default styled.div`
   margin: auto;
-  display: block;
+  display: flex;
   text-align: initial;
   width: 200px;
   height: 200px;
@@ -15,16 +15,20 @@ export default styled.div`
     margin: auto;
     color : white;
     background: linear-gradient(-180deg, white, #fda3b2);;
+    display: flex;
+    align-content: center;
+    justify-content: center;
   }
   .hexagon i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     z-index: 1;
+    margin : auto;
     font-size: 50px;
-    color: #e37682;
+    color : transparent;
+    background : ${props => props.theme.grad};
+    background-clip: text;
+    -webkit-background-clip: text;
   }
+
   .hexagon:before {
     position: absolute;
     content: '';

@@ -27,26 +27,26 @@ export const NavWrapper = styled.div`
   
   .nav__title {
     font-family: 'Lobster', cursive;
-    color: ${prop => prop.theme.primary};
+    color: transparent;
     background: ${prop => prop.theme.grad};
     margin: auto;
     margin-left: 0;
-    font-size : ${props => props.shrink ? '21px' : 'auto'};
+    font-size : ${props => props.shrink ? '1.2em' : 'auto'};
     transition: 0.2s;
 
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .nav__items {
     display: flex;
-    justify-content: space-around;
+    font-size: 0.8rem;
+    /* justify-content: center; */
 
     list-style: none;
     text-transform: uppercase;
     
-    margin: auto;
-    margin-right : 0;
+    margin: auto 0;
     height: 100%;
     transition: 0.3s;
   }
@@ -112,8 +112,8 @@ export const NavWrapper = styled.div`
 export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
-  padding: 10px;
-  margin-left: 30px;
+  padding: 1rem;
+  margin-left: 0.1rem;
   cursor: pointer;
   color : ${props => props.theme.primary};
 
@@ -121,8 +121,9 @@ export const NavLink = styled(Link)`
     background-color : ${props => props.theme.primary};
     color : white;
   }
-  @media screen and (max-width : 768px) {
-    padding : 10px 20px;
-    margin : 20px 0;
-  }
+
+  ${media.tablet`
+    padding : 0.7rem 1rem;
+    margin : 1rem 0;
+  `}
 `

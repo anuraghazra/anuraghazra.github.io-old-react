@@ -5,15 +5,14 @@ import media from '../helpers/media.style';
 import interact from 'interactjs';
 import './Lightbox.css';
 
-
 const LightboxWrapper = styled.div`
-  display : block;
+  display: block;
 
   img {
     position: absolute;
-    left : 25%;
-    top : 10%;
-    width : 50%;
+    left: 25%;
+    top: 10%;
+    width: 50%;
     touch-action: none;
     ${media.tablet`
       left : 0%;
@@ -24,8 +23,8 @@ const LightboxWrapper = styled.div`
 
   .gestureArea {
     position: relative;
-    width : 100vw;
-    height : 100vh;
+    width: 100vw;
+    height: 100vh;
     display: block;
   }
 
@@ -47,18 +46,18 @@ const LightboxWrapper = styled.div`
     padding: 20px;
     cursor: pointer;
     position: absolute;
-    top : 10%;
+    top: 10%;
     left: 80%;
-    color : white;
-    border-radius : 50%;
-    transition : 0.2s;
+    color: white;
+    border-radius: 50%;
+    transition: 0.2s;
   }
 
   .close:hover {
-    color : ${props => props.theme.secondaryLight};
+    color: ${props => props.theme.secondaryLight};
     transform: rotate(180deg);
   }
-`
+`;
 
 class Lightbox extends Component {
   constructor(props) {
@@ -72,7 +71,9 @@ class Lightbox extends Component {
     };
   }
 
-  preventScrolling = (e) => { e.preventDefault() }
+  preventScrolling = e => {
+    e.preventDefault();
+  };
 
   componentDidMount() {
     this.overlay.current.addEventListener('mousewheel', this.preventScrolling);
@@ -83,27 +84,30 @@ class Lightbox extends Component {
     let scaleElement = this.overlayImg.current;
 
     let zoomScale = 1;
-    gestureArea.addEventListener('mousewheel', function (e) {
+    gestureArea.addEventListener('mousewheel', function(e) {
       e.preventDefault();
       if (e.wheelDeltaY > 0) {
         zoomScale += 0.1;
       } else if (e.wheelDeltaY < 0) {
         zoomScale -= 0.1;
       }
-      if (zoomScale < 0.05) { zoomScale = 0.05 }
+      if (zoomScale < 0.05) {
+        zoomScale = 0.05;
+      }
       scaleElement.style.transform = `scale(${zoomScale})`;
     });
 
     interact(gestureArea)
       .gesturable({
-        onmove: function (event) {
+        onmove: function(event) {
           scale = scale * (1 + event.ds);
           scaleElement.style.transform = 'scale(' + scale + ')';
           dragMoveListener(event);
-        },
-      }).draggable({
+        }
+      })
+      .draggable({
         onmove: dragMoveListener,
-        inertia: true,
+        inertia: true
       });
     function dragMoveListener(event) {
       let target = event.target;
@@ -122,19 +126,21 @@ class Lightbox extends Component {
 
   closeLightBox = () => {
     this.props.handleClose();
-  }
+  };
 
   render() {
     return (
       <LightboxWrapper position={this.state.position} ref={this.overlay}>
-        <div className="lightbox">
-          <div className="gestureArea" ref={this.gestureArea}>
-            <img ref={this.overlayImg} src={this.props.image} alt="" />
+        <div className='lightbox'>
+          <div className='gestureArea' ref={this.gestureArea}>
+            <img ref={this.overlayImg} src={this.props.image} alt='' />
           </div>
-          <p onClick={this.closeLightBox} className="close"><i className="fas fa-2x fa-times-circle"></i></p>
+          <p onClick={this.closeLightBox} className='close'>
+            <i className='fas fa-2x fa-times-circle' />
+          </p>
         </div>
       </LightboxWrapper>
-    )
+    );
   }
 }
 

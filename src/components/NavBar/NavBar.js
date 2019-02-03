@@ -25,6 +25,8 @@ function NavItems({ mobile, hideMenu }) {
       {/* <Link to="jsprojects" hideMenu={hideMenu} >JS Projects</Link> */}
       <Link to="creativecoding" hideMenu={hideMenu} >Creative Coding</Link>
       <Link to="concepts" hideMenu={hideMenu} >Concepts</Link>
+      <Link to="about" hideMenu={hideMenu} >About</Link>
+      <Link to="contact" hideMenu={hideMenu} >Contact</Link>
     </div>
   )
 }

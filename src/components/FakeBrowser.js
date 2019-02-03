@@ -151,7 +151,11 @@ class FakeBrowser extends Component {
     }
 
     return (
-      <BrowserWindow hideNav={this.props.hideNav} image={this.props.image} youtube={this.props.youtube} >
+      <BrowserWindow
+        className={this.props.className}
+        hideNav={this.props.hideNav}
+        image={this.props.image}
+        youtube={this.props.youtube}>
         {
           !(this.props.hideNav) &&
           (<div className="fake-nav">
