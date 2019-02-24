@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Hexagon from '../Hexagon/Hexagon';
 
@@ -24,19 +24,17 @@ const HexagonWrapper = styled.div`
   }
 `;
 
-class HexagonCard extends Component {
-  render() {
-    return (
-      <HexagonWrapper>
-        <HexagonCardWrapper>
-          <Hexagon icon={this.props.icon} />
-          <p className="card-title">{this.props.title}</p>
-          <hr />
-          {this.props.children}
-        </HexagonCardWrapper>
-      </HexagonWrapper>
-    );
-  }
+function HexagonCard(props) {
+  return (
+    <HexagonWrapper>
+      <HexagonCardWrapper>
+        <Hexagon icon={props.icon} />
+        <p className="card-title">{props.title}</p>
+        <hr />
+        {props.children}
+      </HexagonCardWrapper>
+    </HexagonWrapper>
+  );
 }
 
 export default HexagonCard;

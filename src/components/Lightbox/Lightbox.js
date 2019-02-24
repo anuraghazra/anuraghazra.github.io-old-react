@@ -80,11 +80,11 @@ class Lightbox extends Component {
     this.overlay.current.addEventListener('touchmove', this.preventScrolling);
 
     let scale = 1;
-    let gestureArea = this.gestureArea.current;
-    let scaleElement = this.overlayImg.current;
+    const gestureArea = this.gestureArea.current;
+    const scaleElement = this.overlayImg.current;
 
     let zoomScale = 1;
-    gestureArea.addEventListener('mousewheel', function(e) {
+    gestureArea.addEventListener('mousewheel', (e) => {
       e.preventDefault();
       if (e.wheelDeltaY > 0) {
         zoomScale += 0.1;
@@ -99,7 +99,7 @@ class Lightbox extends Component {
 
     interact(gestureArea)
       .gesturable({
-        onmove: function(event) {
+        onmove: function (event) {
           scale = scale * (1 + event.ds);
           scaleElement.style.transform = 'scale(' + scale + ')';
           dragMoveListener(event);
@@ -110,9 +110,9 @@ class Lightbox extends Component {
         inertia: true
       });
     function dragMoveListener(event) {
-      let target = event.target;
-      let x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
-      let y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+      const { target } = event;
+      const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+      const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
       target.style.transform = `translate(${x}px, ${y}px)`;
       target.setAttribute('data-x', x);
       target.setAttribute('data-y', y);

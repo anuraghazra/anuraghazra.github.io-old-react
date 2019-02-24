@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Hexagon from '../Hexagon/Hexagon';
-import FakeBrowser from '../FakeBrowser';
+import FakeBrowser from '../FakeBrowser/FakeBrowser';
 
 const ContactWrapper = styled.section`
   width: 100%;

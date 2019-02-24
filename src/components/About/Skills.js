@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import media from '../helpers/media.style';
 
@@ -65,13 +65,6 @@ const SkillsWrapper = styled.section`
 
 `;
 
-const BarChart = (props) => {
-  return (
-    <div className="chart">
-      {props.children}
-    </div>
-  )
-}
 const Bar = (props) => {
   return (
     <div className="bar">
@@ -84,35 +77,31 @@ const Bar = (props) => {
   )
 }
 
-class Skills extends Component {
-  state = {
-    skills: [
-      { name: 'HTML5', icon: 'fab fa-html5', percent: 88 },
-      { name: 'CSS', icon: 'fab fa-css3', percent: 20 },
-      { name: 'NodeJS', icon: 'fab fa-node', percent: 55 },
-      { name: 'React', icon: 'fab fa-react', percent: 45 },
-      { name: 'Git', icon: 'fab fa-github', percent: 75 },
-      { name: 'Canvas', icon: 'fas fa-palette', percent: 90 },
-      { name: 'Raster', icon: 'fab fa-adobe', percent: 63 },
-      { name: 'Vector', icon: 'fa fa-bezier-curve', percent: 78 },
-    ]
-  }
+function Skills() {
+  const skills = [
+    { name: 'HTML5', icon: 'fab fa-html5', percent: 88 },
+    { name: 'CSS', icon: 'fab fa-css3', percent: 20 },
+    { name: 'NodeJS', icon: 'fab fa-node', percent: 55 },
+    { name: 'React', icon: 'fab fa-react', percent: 45 },
+    { name: 'Git', icon: 'fab fa-github', percent: 75 },
+    { name: 'Canvas', icon: 'fas fa-palette', percent: 90 },
+    { name: 'Raster', icon: 'fab fa-adobe', percent: 63 },
+    { name: 'Vector', icon: 'fa fa-bezier-curve', percent: 78 },
+  ]
 
-  render() {
-    let filtered = this.state.skills.sort((e, f) => f.percent - e.percent);
-    return (
-      <SkillsWrapper>
-        <h2>My skillz with a 'Z'</h2>
-        <BarChart>
-          {
-            filtered.map((data, i) => {
-              return <Bar key={i} name={data.name} icon={data.icon} percent={data.percent} />
-            })
-          }
-        </BarChart>
-      </SkillsWrapper>
-    )
-  }
+  const filtered = skills.sort((e, f) => f.percent - e.percent);
+  return (
+    <SkillsWrapper>
+      <h2>My skillz with a 'Z'</h2>
+      <div className="chart">
+        {
+          filtered.map((data, i) => {
+            return <Bar key={i} name={data.name} icon={data.icon} percent={data.percent} />
+          })
+        }
+      </div>
+    </SkillsWrapper>
+  )
 }
 
 export default Skills;

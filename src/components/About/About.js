@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import media from '../helpers/media.style';
 
-import Avatar from '../Avatar/Avatar';
+import Avatar from '../Avatar';
 import Skills from './Skills';
 
 const AboutWrapper = styled.section`

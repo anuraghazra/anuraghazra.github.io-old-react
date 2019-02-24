@@ -1,5 +1,40 @@
 [
   {
+    "title": "WebUI Firewatch",
+    "brief" : "Design which feels right, this UI template is made for showing that illustrations and vivid colors can make your design look great",
+    "links" : {
+      "image" : "./static/img/webui_firewatch.png" 
+    }
+  },
+  {
+    "title": "WebUI Nike",
+    "brief" : "Nike Zapatilla Legend is one of the best nike products out there, this ui is simple, minimal and sleek",
+    "links" : {
+      "image" : "./static/img/webui_nike.png" 
+    }
+  },
+  {
+    "title": "WebUI Nature",
+    "brief" : "Beauty of Nature, we can you nagative letter spacing to give users a better visual experience and which looks awesome, and provides a sleek and uniqe UI",
+    "links" : {
+      "image" : "./static/img/webui_nature.png" 
+    }
+  },
+  {
+    "title": "WebUI Pagani",
+    "brief" : "Who doesn't love Speed, thats why Pagani Huyara comes in to play, combination of speed and customization gives buyers freedom over the super car.",
+    "links" : {
+      "image" : "./static/img/webui_pagani.png" 
+    }
+  },
+  {
+    "title": "WebUI Harley Devidson",
+    "brief" : "Legend of all time Harley Devidson, i created this design which provides users bold look of Harley Devidson V-Rod and all the background illustrations and color contrasts makes the design great.",
+    "links" : {
+      "image" : "./static/img/webui_harley.png" 
+    }
+  },
+  {
     "title": "Neon Design",
     "brief": "One Of My site which uses css3 animations with great easeing animation gives the user a subtle feedback which improves User Experience",
     "links": {

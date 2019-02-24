@@ -1,9 +1,13 @@
+// @ts-check
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
 
-import FakeBrowser from '../FakeBrowser';
+import FakeBrowser from '../FakeBrowser/FakeBrowser';
 
+/**
+ * @type any
+ */
 const GitLinksWrapper = styled.div`
   margin-top : 2rem;
   width: 100%;
@@ -25,13 +29,20 @@ const GitLinksWrapper = styled.div`
     margin-left: 10px;
   }
 `
+
+/**
+ * @param {object} props
+ * @param {string} props.demo 
+ * @param {string} props.source 
+ * @param {boolean=} props.noStyle 
+ */
 const GitLinks = ({ demo, source, noStyle }) => {
   return (
     <GitLinksWrapper noStyle={noStyle}>
-      <a target="_blank" href={demo}>
+      <a rel="noopener noreferrer" target="_blank" href={demo}>
         <i className="fa fa-2x fa-window-maximize"></i><span>Live Demo</span>
       </a>
-      <a target="_blank" href={source}>
+      <a rel="noopener noreferrer" target="_blank" href={source}>
         <i className="fab fa-2x fa-github"></i><span>Source Code</span>
       </a>
     </GitLinksWrapper>
@@ -39,7 +50,7 @@ const GitLinks = ({ demo, source, noStyle }) => {
 }
 
 const TechUsed = ({ icons }) => {
-  let icon = {};
+  const icon = {};
   for (let i = 0; i < icons.length; i++) {
     icon[icons[i]] = true;
   }
@@ -54,34 +65,56 @@ const TechUsed = ({ icons }) => {
   )
 }
 
-const Project = (props) => {
+
+/**
+ * 
+ * @param {object} props
+ * @param {string} props.title 
+ * @param {object} props.links 
+ * @param {object} props.tags 
+ * @param {object} props.langs 
+ * @param {object} props.tools 
+ * @param {object} props.icons 
+ * @param {boolean} props.children 
+ * @param {boolean=} props.noVideo 
+ */
+const Project = ({
+  title,
+  links,
+  tags,
+  langs,
+  tools,
+  icons,
+  noVideo,
+  children
+}) => {
   return (
     <>
       {
-        !props.noVideo ? (
+        !noVideo && (
           <Grid item xs={12} md={7}>
-            <FakeBrowser youtube url={props.links.video} />
+            <FakeBrowser youtube url={links.video} />
           </Grid>
-        ) : null
+        )
       }
-      <Grid item xs={12} md={!props.noVideo ? 5 : true}>
-        <h2 className="sub-title title-grad">{props.title}</h2>
+      <Grid item xs={12} md={!noVideo ? 5 : true}>
+        <h2 className="sub-title title-grad">{title}</h2>
         <div className="project__info">
-          {props.children}
+          {children}
           <ul className="side-projects-ul">
             <li>Implements :
               <div>
-                {props.tags.map((text, i) => <span key={i} className="tags">{text}</span>)}
+                {tags.map((text, i) => <span key={i} className="tags">{text}</span>)}
               </div>
             </li>
-            <li>Languages : {props.langs}</li>
-            <li>Tools : {props.tools}</li>
+            <li>Languages : {langs}</li>
+            <li>Tools : {tools}</li>
           </ul>
-          <TechUsed icons={props.icons} />
+          <TechUsed icons={icons} />
         </div>
         <GitLinks
-          demo={props.links.demo}
-          source={props.links.src}
+          demo={links.demo}
+          source={links.src}
         />
       </Grid>
     </>

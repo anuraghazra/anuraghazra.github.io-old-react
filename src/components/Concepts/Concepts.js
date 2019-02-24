@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import jsonData from './jsonData.json';
 
 import FlexWrapper from '../helpers/FlexWrapper';
-import SingleConcept from '../Projects/SingleJSProject';
 import Lightbox from '../Lightbox/Lightbox';
+import SingleConcept from '../Projects/JSProjects/SingleJSProject';
 
 const ConceptsWrapper = styled(FlexWrapper)`
   color: white;
@@ -75,15 +75,6 @@ class Concepts extends Component {
   handleClose = () => {
     this.setState({ lightbox_open: false });
   }
-  
-  // componentDidMount() {
-  //   fetch('./static/jsonData.json')
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       this.setState({ data : data });
-  //       console.log(this.state)
-  //     })
-  // }
 
   render() {
     return (
@@ -91,8 +82,9 @@ class Concepts extends Component {
         {
           this.state.lightbox_open &&
           <Lightbox
-          handleClose={this.handleClose}
-          image={this.state.lightbox_image} />
+            handleClose={this.handleClose}
+            image={this.state.lightbox_image}
+          />
         }
 
         {
