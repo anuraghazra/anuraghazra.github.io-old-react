@@ -1,6 +1,10 @@
 // @ts-check
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+
+import { useSpring, animated, config } from "react-spring";
+import { useInView } from 'react-intersection-observer';
+
+import { Row, Col } from 'react-flexbox-grid';
 import FakeBrowser from '../../FakeBrowser/FakeBrowser';
 
 export const IconLink = ({ source, icon }) => {
@@ -47,33 +51,52 @@ function SingleJSProject({
   title,
   children
 }) {
-  return (
-    <Grid
-      container
-      justify={'space-between'}
-      alignItems={'center'}
-      className={'project'}
-      onClick={handleClick}
-      direction={!rowReverse ? 'row-reverse' : 'row'}
-    >
-      <Grid item xs={12} md={7}>
-        <FakeBrowser
-          hideNav={hideNav}
-          image={image}
-          url={links.demo}
-        />
-      </Grid>
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true
+  });
 
-      <Grid item xs={12} md={5} className={'project__body'}>
-        <h2 className="sub-title">{title}</h2>
-        <div className="project__info">
-          {children}
-        </div>
-        <div className="project__links">
-          <PanelLinks links={links} />
-        </div>
-      </Grid>
-    </Grid>
+  const props = useSpring({
+    config: config.gentle,
+    delay: 300,
+    from: {
+      opacity: 0,
+      transform: 'translateX(-100px)'
+    },
+    to: {
+      opacity: inView ? 1 : 0,
+      transform: inView ? 'translateX(0)' : 'translateX(-100px)'
+    }
+  });
+  return (
+    <animated.div style={{...props, width: '100%'}} ref={ref}>
+
+      <Row
+        center='xs'
+        around='xs'
+        reverse={rowReverse}
+        className={'project'}
+        onClick={handleClick}
+      >
+        <Col xs={12} md={7}>
+          <FakeBrowser
+            hideNav={hideNav}
+            image={image}
+            url={links.demo}
+          />
+        </Col>
+
+        <Col xs={12} md={5} className={'project__body'}>
+          <h2 className="sub-title">{title}</h2>
+          <div className="project__info">
+            {children}
+          </div>
+          <div className="project__links">
+            <PanelLinks links={links} />
+          </div>
+        </Col>
+      </Row>
+    </animated.div>
   )
 }
 

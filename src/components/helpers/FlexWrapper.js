@@ -6,7 +6,7 @@ const FlexWrapper = styled.div`
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  padding-top : 80px;
+  padding-top : 40px;
 
   ${media.tablet`
     padding : 5px;

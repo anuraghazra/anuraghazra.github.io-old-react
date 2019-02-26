@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import media from '../helpers/media.style';
 
+import { Spring } from "react-spring/renderprops"
+import { useInView } from 'react-intersection-observer';
 const SkillsWrapper = styled.section`
   width : 100%;
   height : auto;
@@ -66,18 +68,39 @@ const SkillsWrapper = styled.section`
 `;
 
 const Bar = (props) => {
+  // const barAni = useSpring({
+  //   config: config.gentle,
+  //   from: {
+  //     number: 0,
+  //   },
+  //   number: inView ? parseInt(props.percent) : 0,
+  // });
   return (
     <div className="bar">
-      <div className='progress' style={{ width: props.percent + '%' }}>
-        <div className="bar-icon"><i className={props.icon}></i></div>
-        <p className="name">{props.name}</p>
-      </div>
-      <p className="percent">{props.percent}%</p>
+      <Spring
+        from={{ number: 0 }}
+        to={{ number: props.inView ? props.percent : 0 }}>
+        {
+          spring => (
+            <React.Fragment>
+              <div className='progress' style={{ width: spring.number + '%' }}>
+                <div className="bar-icon"><i className={props.icon}></i></div>
+                <p className="name">{props.name}</p>
+              </div>
+              <div>{props.percent}</div>
+              <p className="percent">{(spring.number).toFixed(0)}%</p>
+            </React.Fragment>
+          )
+        }
+      </Spring>
     </div>
   )
 }
 
 function Skills() {
+  const [ref, inView] = useInView({
+    threshold: 0.2
+  });
   const skills = [
     { name: 'HTML5', icon: 'fab fa-html5', percent: 88 },
     { name: 'CSS', icon: 'fab fa-css3', percent: 20 },
@@ -91,12 +114,12 @@ function Skills() {
 
   const filtered = skills.sort((e, f) => f.percent - e.percent);
   return (
-    <SkillsWrapper>
+    <SkillsWrapper ref={ref}>
       <h2>My skillz with a 'Z'</h2>
       <div className="chart">
         {
           filtered.map((data, i) => {
-            return <Bar key={i} name={data.name} icon={data.icon} percent={data.percent} />
+            return <Bar key={i} inView={inView} name={data.name} icon={data.icon} percent={data.percent} />
           })
         }
       </div>

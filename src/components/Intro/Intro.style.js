@@ -2,6 +2,11 @@ import styled from 'styled-components';
 import media from '../helpers/media.style';
 
 export const IntroWrapper = styled.section`
+  .bg_svg {
+    position: relative;
+    width: 600px;
+    height: 600px;
+  }
   
   .intro__content {
     height: 100vh;
@@ -28,6 +33,11 @@ export const IntroWrapper = styled.section`
   .slogan {
     font-family: 'Muli', sans-serif;
     font-size : 18px;
+  }
+
+  .avtr-animated {
+    flex: none;
+    margin: auto;
   }
 
   

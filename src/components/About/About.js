@@ -4,6 +4,7 @@ import media from '../helpers/media.style';
 
 import Avatar from '../Avatar';
 import Skills from './Skills';
+import Contact from '../Contact/Contact';
 
 const AboutWrapper = styled.section`
   color : white;
@@ -42,6 +43,9 @@ function About(props) {
       </p>
 
       <Skills />
+
+      <h1 className='sub-title page-title'>Contact</h1>
+      <Contact id='contact' />
     </AboutWrapper>
   )
 }

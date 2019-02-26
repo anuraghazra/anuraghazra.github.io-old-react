@@ -2,11 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Hexagon from '../Hexagon/Hexagon';
 
-import Zoom from 'react-reveal/Zoom';
-import withReveal from 'react-reveal/withReveal';
-
-const HexagonCardWrapper = withReveal(styled.div``, <Zoom />);
-
 const HexagonWrapper = styled.div`
   flex: 1;
   margin: 20px;
@@ -26,13 +21,11 @@ const HexagonWrapper = styled.div`
 
 function HexagonCard(props) {
   return (
-    <HexagonWrapper>
-      <HexagonCardWrapper>
-        <Hexagon icon={props.icon} />
-        <p className="card-title">{props.title}</p>
-        <hr />
-        {props.children}
-      </HexagonCardWrapper>
+    <HexagonWrapper style={{...props.style}}>
+      <Hexagon icon={props.icon} />
+      <p className="card-title">{props.title}</p>
+      <hr />
+      {props.children}
     </HexagonWrapper>
   );
 }

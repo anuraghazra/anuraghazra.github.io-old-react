@@ -2,6 +2,9 @@
   overflow: scroll;
 }
 
+.row {
+  margin: 0;
+}
 .backdrop {
   position: fixed;
   top: 0;
@@ -72,4 +75,14 @@
   color: #a58fe9 !important;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
+}
+
+.bg-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -49%;
+  left: 0px;
+  fill: white;
+  opacity: 0.1
 }

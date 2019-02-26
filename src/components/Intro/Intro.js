@@ -1,48 +1,62 @@
 import React from 'react';
 import Link from 'react-scroll/modules/components/Link';
-import styled from 'styled-components';
-
-import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
 
 import { IntroWrapper } from './Intro.style';
 import Avatar from '../Avatar';
 
-import bg from './bg.svg';
-
-const Avtr = styled.div`
-  flex: none;
-  margin: auto;
-`;
+import { useSpring, animated, config } from "react-spring";
+import { useInView } from 'react-intersection-observer'
 
 const IntroText = () => {
   return (
-    <Fade top>
-      <div className='intro__text'>
-        <p>Hi, I'm Anurag Hazra</p>
-        <p>Passionate Web Designer</p>
-        <p className='slogan'>
-          <span> Simplicity Is The</span>
-          <span> Baddest choice</span>
-          <span> To Be The Best</span>
-        </p>
-      </div>
-    </Fade>
+    <React.Fragment>
+      <p>Hi, I'm Anurag Hazra</p>
+      <p>Passionate Web Designer</p>
+      <p className='slogan'>
+        <span> Simplicity Is The</span>
+        <span> Baddest choice</span>
+        <span> To Be The Best</span>
+      </p>
+    </React.Fragment>
   )
 }
 
 function Intro() {
-  return (
-    <IntroWrapper id='intro'>
-      <img src={bg} alt='bg' />
-      <main className='intro__content'>
-        <IntroText />
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+  const fadeTop = useSpring({
+    config: config.gentle,
+    from: {
+      opacity: 0,
+      transform: "translateY(-100px)"  
+    },
+    to : {
+      opacity: inView ? 1 : 0,
+      transform: inView ? "translateY(0px)" : "translateY(-100px)"
+    }
+  });
+  const zoom = useSpring({
+    config: config.gentle,
+    from: {
+      opacity: 0,
+      transform: "scale(0)"  
+    },
+    opacity: inView ? 1 : 0,
+    transform: inView ? "scale(1)" : "scale(0)"
+  });
 
-        <Avtr>
-          <Zoom>
-            <Avatar img={'static/img/avatar-min.jpg'} />
-          </Zoom>
-        </Avtr>
+  return (
+    <IntroWrapper id='intro' ref={ref}>
+      <main className='intro__content'>
+
+        <animated.div className="intro__text" style={fadeTop}>
+          <IntroText />
+        </animated.div>
+
+        <animated.div className="avtr-animated" style={zoom}>
+          <Avatar img={'static/img/avatar-min.jpg'} />
+        </animated.div>
 
         <Link
           spy={true}

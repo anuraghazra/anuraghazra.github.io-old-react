@@ -1,9 +1,9 @@
 // @ts-check
 import React, { useState } from 'react';
 
-import Observer from '@researchgate/react-intersection-observer';
 import LoadingPlaceholder from './LoadingPlaceholder';
 import BrowserWindow from './FakeBrowser.style';
+import { useInView } from 'react-intersection-observer'
 
 /**
  * @param {Object} obj
@@ -17,6 +17,14 @@ const IFrame = ({ isVisible, url, onloadEvent }) => {
     <iframe onLoad={onloadEvent} title={url} width="100%" src={isVisible ? src : undefined} frameBorder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
     </iframe>
+  )
+}
+
+const FakeNav = () => {
+  return (
+    <div className="fake-nav">
+      <i></i><i></i><i></i>
+    </div>
   )
 }
 
@@ -62,24 +70,30 @@ const Img = ({ isVisible, url, onLoad }) => {
 }
 
 function FakeBrowser(props) {
-  const [isEntered, setEntered] = useState(false);
+  // const [isEntered, setEntered] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [ref, inView] = useInView({
+    /* Optional options */
+    threshold: 0,
+    triggerOnce: true
+  });
 
-  const handleEnter = (event) => {
-    if (event.isIntersecting === true) {
-      setEntered(event.isIntersecting)
-    }
-  }
+
+  // const handleEnter = (event) => {
+  //   if (event.isIntersecting === true) {
+  //     setEntered(event.isIntersecting)
+  //   }
+  // }
 
   const handleLoad = () => {
-    setLoaded(true)
+    setLoaded(true);
   }
 
   let component;
   if (props.image) {
-    component = <Img isVisible={isEntered} url={props.url} onLoad={handleLoad} />
+    component = <Img isVisible={inView} url={props.url} onLoad={handleLoad} />
   } else {
-    component = <IFrame isVisible={isEntered} url={props.url} onloadEvent={handleLoad} />
+    component = <IFrame isVisible={inView} url={props.url} onloadEvent={handleLoad} />
   }
 
   return (
@@ -89,18 +103,12 @@ function FakeBrowser(props) {
       image={props.image}
       youtube={props.youtube}
     >
-      {
-        !(props.hideNav) &&
-        <div className="fake-nav">
-          <i></i><i></i><i></i>
-        </div>
-      }
-      {(isEntered && (!loaded)) && <LoadingPlaceholder />}
-      <Observer disabled={isEntered} onChange={handleEnter}>
-        <div>
-          {component}
-        </div>
-      </Observer>
+      {!props.hideNav && <FakeNav />}
+      {(inView && (!loaded)) && <LoadingPlaceholder />}
+
+      <div ref={ref}>
+        {component}
+      </div>
     </BrowserWindow>
   )
 }

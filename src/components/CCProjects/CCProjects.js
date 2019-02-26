@@ -3,10 +3,25 @@ import React, { useState, useEffect } from 'react'
 import FakeBrowser from '../FakeBrowser/FakeBrowser';
 import { GitLinks } from '../Projects/SingleProject';
 import CCWrapper from './CCProjects.style';
+import { useSpring, animated, config } from "react-spring";
+import { useInView } from 'react-intersection-observer';
 
 const CCCard = ({ img, demo, src, title }) => {
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true
+  });
+  const slideUp = useSpring({
+    config: config.gentle,
+    from: {
+      opacity: 0,
+      transform: "translateY(100px)"
+    },
+    opacity: inView ? 1 : 0,
+    transform: inView ? "translateY(0px)" : "translateY(100px)"
+  });
   return (
-    <li className="cards__item">
+    <animated.li style={slideUp} ref={ref} className="cards__item">
       <div className="card__body">
         <div className="card__image">
           <FakeBrowser hideNav={true} image={true} url={img} />
@@ -18,7 +33,7 @@ const CCCard = ({ img, demo, src, title }) => {
           </div>
         </div>
       </div>
-    </li>
+    </animated.li>
   )
 }
 

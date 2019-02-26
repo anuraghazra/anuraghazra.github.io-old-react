@@ -1,18 +1,17 @@
 // @ts-check
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
-
+import { Row, Col } from 'react-flexbox-grid';
+import { useSpring, animated, config } from "react-spring";
+import { useInView } from 'react-intersection-observer';
 import FakeBrowser from '../FakeBrowser/FakeBrowser';
 
 /**
  * @type any
  */
-const GitLinksWrapper = styled.div`
-  margin-top : 2rem;
+const GitLinksWrapper = styled(Row)`
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+  margin-top : 2rem;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid ${props => props.theme.secondaryLight};
@@ -36,9 +35,9 @@ const GitLinksWrapper = styled.div`
  * @param {string} props.source 
  * @param {boolean=} props.noStyle 
  */
-const GitLinks = ({ demo, source, noStyle }) => {
+const GitLinks = ({ demo, source }) => {
   return (
-    <GitLinksWrapper noStyle={noStyle}>
+    <GitLinksWrapper around='xs'>
       <a rel="noopener noreferrer" target="_blank" href={demo}>
         <i className="fa fa-2x fa-window-maximize"></i><span>Live Demo</span>
       </a>
@@ -55,13 +54,31 @@ const TechUsed = ({ icons }) => {
     icon[icons[i]] = true;
   }
   return (
-    <Grid justify={'space-evenly'} style={{ width: '100%' }} container>
-      {icon.html && <Grid item><i className="fab fa-2x fa-html5"></i></Grid>}
-      {icon.js && <Grid item><i className="fab fa-2x fa-js-square"></i></Grid>}
-      {icon.css && <Grid item><i className="fab fa-2x fa-css3"></i></Grid>}
-      {icon.node && <Grid item><i className="fab fa-2x fa-node-js"></i></Grid>}
-      {icon.server && <Grid item><i className="fas fa-2x fa-server"></i></Grid>}
-    </Grid>
+    <Row around='xs'>
+      {icon.html && <Col><i className="fab fa-2x fa-html5"></i></Col>}
+      {icon.js && <Col><i className="fab fa-2x fa-js-square"></i></Col>}
+      {icon.css && <Col><i className="fab fa-2x fa-css3"></i></Col>}
+      {icon.node && <Col><i className="fab fa-2x fa-node-js"></i></Col>}
+      {icon.server && <Col><i className="fas fa-2x fa-server"></i></Col>}
+    </Row>
+  )
+}
+
+const Info = ({ children, tags, langs, tools, icons }) => {
+  return (
+    <div className="project__info">
+      {children}
+      <ul className="side-projects-ul">
+        <li>Implements :
+          <div>
+            {tags.map((text, i) => <span key={i} className="tags">{text}</span>)}
+          </div>
+        </li>
+        <li>Languages : {langs}</li>
+        <li>Tools : {tools}</li>
+      </ul>
+      <TechUsed icons={icons} />
+    </div>
   )
 }
 
@@ -76,7 +93,7 @@ const TechUsed = ({ icons }) => {
  * @param {object} props.tools 
  * @param {object} props.icons 
  * @param {boolean} props.children 
- * @param {boolean=} props.noVideo 
+ * @param {boolean=} props.noVideo
  */
 const Project = ({
   title,
@@ -88,36 +105,46 @@ const Project = ({
   noVideo,
   children
 }) => {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: true
+  });
+
+  const props = useSpring({
+    config: config.gentle,
+    from: {
+      opacity: 0,
+      transform: 'translateY(100px)'
+    },
+    to: {
+      opacity: inView ? 1 : 0,
+      transform: inView ? 'translateY(0)' : 'translateY(100px)'
+    }
+  });
+
   return (
-    <>
-      {
-        !noVideo && (
-          <Grid item xs={12} md={7}>
-            <FakeBrowser youtube url={links.video} />
-          </Grid>
-        )
-      }
-      <Grid item xs={12} md={!noVideo ? 5 : true}>
-        <h2 className="sub-title title-grad">{title}</h2>
-        <div className="project__info">
-          {children}
-          <ul className="side-projects-ul">
-            <li>Implements :
-              <div>
-                {tags.map((text, i) => <span key={i} className="tags">{text}</span>)}
-              </div>
-            </li>
-            <li>Languages : {langs}</li>
-            <li>Tools : {tools}</li>
-          </ul>
-          <TechUsed icons={icons} />
-        </div>
-        <GitLinks
-          demo={links.demo}
-          source={links.src}
-        />
-      </Grid>
-    </>
+    <animated.div style={props} ref={ref}>
+      <Row reverse className={'single__project'}>
+        {
+          !noVideo && (
+            <Col xs={12} lg={7}>
+              <FakeBrowser youtube url={links.video} />
+            </Col>
+          )
+        }
+        <Col xs={12} lg={!noVideo ? 5 : true}>
+          <h2 className="sub-title title-grad">{title}</h2>
+          <Info
+            tags={tags}
+            langs={langs}
+            icons={icons}
+            tools={tools}
+            children={children}
+          />
+          <GitLinks demo={links.demo} source={links.src} />
+        </Col>
+      </Row>
+    </animated.div>
   )
 }
 

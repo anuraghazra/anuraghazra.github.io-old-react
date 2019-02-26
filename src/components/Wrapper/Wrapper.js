@@ -6,7 +6,7 @@ position: relative;
   width : 100%;
   margin : 0 auto;
   text-align: center;
-  padding : 0 40px;
+  padding : 0 20px;
   overflow-x : hidden;
 
   ${media.tablet`

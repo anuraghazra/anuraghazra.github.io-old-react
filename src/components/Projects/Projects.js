@@ -1,8 +1,5 @@
 import React from 'react';
 
-// import Zoom from 'react-reveal/Zoom';
-
-
 import ProjectsWrapper from '../helpers/FlexWrapper';
 import JSProjects from './JSProjects/JSProjects';
 import SideProjects from './SideProject/SideProjects';

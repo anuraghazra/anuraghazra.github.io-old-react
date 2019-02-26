@@ -11,11 +11,8 @@ import Projects from './components/Projects/Projects';
 import Concepts from './components/Concepts/Concepts';
 import CCProjects from './components/CCProjects/CCProjects';
 import About from './components/About/About';
-import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
-// CSS
-// import './css/grid.css';
 import './App.css';
 
 // default styles
@@ -27,12 +24,33 @@ const theme = {
   gradDark: 'linear-gradient(-180deg, #ff6272, #5f4d93)'
 };
 
+
+const BGWave = () => {
+  return (
+    <svg className="bg-wave"
+      id="wave"
+      viewBox="0 0 209.2643 36.755718"
+      height="100%"
+      width="100%">
+      <g
+        transform="translate(-0.23267502,-260.183)"
+        id="layer1">
+        <path id="p1"
+          d="M 0.23267502,290.41885 C 81.514795,318.93117 142.82767,241.47813 209.49697,294.24737 V 260.183 H 0.23267502 Z"
+        />
+      </g>
+    </svg>
+  )
+}
+
 class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme} className='App'>
         <Wrapper>
           <NavBar />
+
+          <BGWave />
 
           <Intro />
 
@@ -50,9 +68,6 @@ class App extends Component {
 
           <h1 className='sub-title page-title'>About</h1>
           <About id='about' />
-
-          <h1 className='sub-title page-title'>Contact</h1>
-          <Contact id='contact' />
 
           <Footer />
         </Wrapper>

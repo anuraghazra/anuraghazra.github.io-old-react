@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import media from './helpers/media.style';
 
 const AvatarWrapper = styled.div`
-  flex: none;
   margin: auto;
   width: 300px;
   height: 300px;
@@ -31,7 +30,7 @@ const AvatarWrapper = styled.div`
 
 const Avatar = props => {
   return (
-    <AvatarWrapper className={props.className}>
+    <AvatarWrapper style={props.style} className={props.className}>
       <img src={props.img} alt='anurag hazra' />
     </AvatarWrapper>
   );
