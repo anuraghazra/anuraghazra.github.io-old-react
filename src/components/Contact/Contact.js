@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Hexagon from '../Hexagon/Hexagon';
+import Hexagon from '../UI/Hexagon/Hexagon';
 import FakeBrowser from '../FakeBrowser/FakeBrowser';
 
 const ContactWrapper = styled.section`

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'react-scroll/modules/components/Link';
 
 import { IntroWrapper } from './Intro.style';
-import Avatar from '../Avatar';
+import Avatar from '../UI/Avatar';
 
 import { useSpring, animated, config } from "react-spring";
 import { useInView } from 'react-intersection-observer'
@@ -29,9 +29,9 @@ function Intro() {
     config: config.gentle,
     from: {
       opacity: 0,
-      transform: "translateY(-100px)"  
+      transform: "translateY(-100px)"
     },
-    to : {
+    to: {
       opacity: inView ? 1 : 0,
       transform: inView ? "translateY(0px)" : "translateY(-100px)"
     }
@@ -40,7 +40,7 @@ function Intro() {
     config: config.gentle,
     from: {
       opacity: 0,
-      transform: "scale(0)"  
+      transform: "scale(0)"
     },
     opacity: inView ? 1 : 0,
     transform: inView ? "scale(1)" : "scale(0)"

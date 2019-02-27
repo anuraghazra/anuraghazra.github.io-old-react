@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import FakeBrowser from '../FakeBrowser/FakeBrowser';
-import { GitLinks } from '../Projects/SingleProject';
+import { GitLinks } from '../Projects/Project';
 import CCWrapper from './CCProjects.style';
 import { useSpring, animated, config } from "react-spring";
 import { useInView } from 'react-intersection-observer';

@@ -1,8 +1,6 @@
 // @ts-check
 import React from 'react';
-
-import SingleJSProject from './SingleJSProject';
-import JSProjectWrapper from './JSProjects.style';
+import GenericProject from '../GenericProject';
 
 const JSProjects = ({ id }) => {
   const projectsData = [
@@ -41,11 +39,11 @@ const JSProjects = ({ id }) => {
   ];
   
   return (
-    <JSProjectWrapper id={id}>
+    <div id={id}>
       {
         projectsData.map((project, index) => {
           return (
-            <SingleJSProject
+            <GenericProject
               key={index}
               hideNav
               rowReverse={(index % 2) ? false : true}
@@ -54,11 +52,11 @@ const JSProjects = ({ id }) => {
               <p>
                 {project.brief}
               </p>
-            </SingleJSProject>
+            </GenericProject>
           )
         })
       }
-    </JSProjectWrapper>
+    </div>
   );
 };
 

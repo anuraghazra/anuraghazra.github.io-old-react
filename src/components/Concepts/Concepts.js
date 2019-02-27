@@ -1,59 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-
-import jsonData from './jsonData.json';
-
-import FlexWrapper from '../helpers/FlexWrapper';
 import Lightbox from '../Lightbox/Lightbox';
-import SingleConcept from '../Projects/JSProjects/SingleJSProject';
-
-const ConceptsWrapper = styled(FlexWrapper)`
-  color: white;
-  position: relative;
-  height: fit-content;
-  
-  .project {
-    margin-bottom: 100px;
-  }
-
-  .project__body {
-    padding : 20px;
-  }
-
-  .project__info {
-    min-height: 250px;
-    margin: 0px;
-    overflow: auto;
-  }
-
-  .project__links {
-    margin-top: 20px;
-    width: 100%;
-    padding: 5px;
-    height: auto;
-    border: 1px solid white;
-    border-radius: 10px;
-  }
-
-  .panel__icons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items : center;
-  }
-
-  .project__links a {
-    flex: 1;
-    margin: 0;
-    color : white;
-    text-align: center;
-    cursor : pointer;
-  }
-
-  .project__links a:hover {
-    color: #242424 !important;
-  }
-`
-
+import GenericProject from '../Projects/GenericProject';
+import jsonData from './jsonData.json';
 
 class Concepts extends Component {
   constructor(props) {
@@ -78,7 +26,7 @@ class Concepts extends Component {
 
   render() {
     return (
-      <ConceptsWrapper id={this.props.id}>
+      <div id={this.props.id}>
         {
           this.state.lightbox_open &&
           <Lightbox
@@ -90,9 +38,9 @@ class Concepts extends Component {
         {
           jsonData.map((data, i) => {
             return (
-              <SingleConcept key={i}
+              <GenericProject key={i}
                 handleClick={this.handleClick}
-                rowReverse={i % 2}
+                rowReverse={(i % 2) ? false : true}
                 title={data.title}
                 image={true}
                 links={{
@@ -101,11 +49,11 @@ class Concepts extends Component {
                 }}
               >
                 <p>{data.brief}</p>
-              </SingleConcept>
+              </GenericProject>
             )
           })
         }
-      </ConceptsWrapper>
+      </div>
     )
   }
 }

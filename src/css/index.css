@@ -18,7 +18,7 @@ body {
   overflow-y: scroll;
 }
 
-@media all and (max-width : 980px) {
+@media all and (max-width: 980px) {
   body {
     background-image: url(/static/img/overlay2.svg);
   }

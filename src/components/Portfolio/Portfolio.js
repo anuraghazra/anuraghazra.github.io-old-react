@@ -1,11 +1,9 @@
-import React from 'react'
-
-import PortfolioWrapper from '../helpers/FlexWrapper';
-import HexagonCard from '../HexagonCard/HexagonCard';
-
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import { config } from "react-spring";
 import { Trail } from "react-spring/renderprops";
-import { useInView } from 'react-intersection-observer';
+import PortfolioWrapper from '../helpers/FlexWrapper';
+import HexagonCard from '../HexagonCard/HexagonCard';
 
 function Portfolio(props) {
   const [ref, inView] = useInView({

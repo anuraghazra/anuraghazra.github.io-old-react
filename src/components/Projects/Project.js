@@ -1,9 +1,9 @@
 // @ts-check
 import React from 'react';
-import styled from 'styled-components';
-import { Row, Col } from 'react-flexbox-grid';
-import { useSpring, animated, config } from "react-spring";
+import { Col, Row } from 'react-flexbox-grid';
 import { useInView } from 'react-intersection-observer';
+import { animated, config, useSpring } from "react-spring";
+import styled from 'styled-components';
 import FakeBrowser from '../FakeBrowser/FakeBrowser';
 
 /**
@@ -148,4 +148,4 @@ const Project = ({
   )
 }
 
-export { GitLinks, TechUsed, Project }
+export { GitLinks, TechUsed, Project };

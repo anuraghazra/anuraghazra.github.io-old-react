@@ -3,17 +3,17 @@ import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 // My Components
-import Wrapper from './components/Wrapper/Wrapper';
+import Wrapper from './components/UI/Wrapper';
 import NavBar from './components/NavBar/NavBar';
 import Intro from './components/Intro/Intro';
 import Porfolio from './components/Portfolio/Portfolio';
-import Projects from './components/Projects/Projects';
+import Projects from './components/Projects/index';
 import Concepts from './components/Concepts/Concepts';
 import CCProjects from './components/CCProjects/CCProjects';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 
-import './App.css';
+import './css/App.css';
 
 // default styles
 const theme = {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import FlexWrapper from '../../helpers/FlexWrapper';
 
-const JSProjectWrapper = styled(FlexWrapper)`
+const GenericProjectWrapper = styled(FlexWrapper)`
   color: white;
   position: relative;
   height: fit-content;
@@ -29,11 +29,11 @@ const JSProjectWrapper = styled(FlexWrapper)`
     border-radius: 10px;
   }
 
-  .panel__icons {
+  /* .panel__icons {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-  }
+  } */
 
   .project__links a {
     flex: 1;
@@ -48,4 +48,4 @@ const JSProjectWrapper = styled(FlexWrapper)`
   }
 `;
 
-export default JSProjectWrapper;
+export default GenericProjectWrapper;

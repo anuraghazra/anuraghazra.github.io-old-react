@@ -5,6 +5,7 @@
 .row {
   margin: 0;
 }
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -17,7 +18,7 @@
 }
 
 .sub-title {
-  color : white;
+  color: white;
   font-family: 'Lobster', cursive !important;
   font-weight: 100 !important;
   font-size: 30px;
@@ -39,6 +40,7 @@
   position: relative;
   margin: 100px auto 50px auto;
 }
+
 .page-title:after {
   position: absolute;
   content: ' ';
@@ -61,10 +63,9 @@
   background-color: white;
 }
 
-
-.tags  {
+.tags {
   padding: 5px 10px;
-  height : 30px;
+  height: 30px;
   margin-right: 10px;
   border-radius: 5px;
   border: 1px solid #a58fe9;

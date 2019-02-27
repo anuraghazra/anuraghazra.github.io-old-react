@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Hexagon from '../Hexagon/Hexagon';
+import Hexagon from '../UI/Hexagon/Hexagon';
 
 const HexagonWrapper = styled.div`
   flex: 1;
@@ -21,7 +21,7 @@ const HexagonWrapper = styled.div`
 
 function HexagonCard(props) {
   return (
-    <HexagonWrapper style={{...props.style}}>
+    <HexagonWrapper style={{ ...props.style }}>
       <Hexagon icon={props.icon} />
       <p className="card-title">{props.title}</p>
       <hr />

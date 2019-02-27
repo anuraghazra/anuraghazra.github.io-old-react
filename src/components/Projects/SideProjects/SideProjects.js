@@ -1,8 +1,8 @@
 import React from 'react';
+import { Col, Row } from 'react-flexbox-grid';
+import { Project } from '../Project';
+import SideProjectsWrapper from '../styles/SideProjects.style';
 
-import { Project } from '../SingleProject';
-import SideProjectsWrapper from './SideProjects.style';
-import { Row, Col } from 'react-flexbox-grid';
 
 function SideProjects() {
   return (

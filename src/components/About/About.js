@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import media from '../helpers/media.style';
 
-import Avatar from '../Avatar';
+import Avatar from '../UI/Avatar';
 import Skills from './Skills';
 import Contact from '../Contact/Contact';
 

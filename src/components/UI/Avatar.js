@@ -1,8 +1,7 @@
 import React from 'react';
 // import LoadingPlaceholder from '../LoadingPlaceholder/LoadingPlaceholder';
-
 import styled from 'styled-components';
-import media from './helpers/media.style';
+import media from '../helpers/media.style';
 
 const AvatarWrapper = styled.div`
   margin: auto;
