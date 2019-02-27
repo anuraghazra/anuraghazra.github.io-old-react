@@ -43,9 +43,6 @@ const CCWrapper = styled.div`
     height: 300px;
     overflow: hidden;
     
-    div {
-      border-radius : 0;
-    }
     img {
       width: 100%;
       height: auto;

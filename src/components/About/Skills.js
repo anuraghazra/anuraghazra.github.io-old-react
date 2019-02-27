@@ -68,13 +68,6 @@ const SkillsWrapper = styled.section`
 `;
 
 const Bar = (props) => {
-  // const barAni = useSpring({
-  //   config: config.gentle,
-  //   from: {
-  //     number: 0,
-  //   },
-  //   number: inView ? parseInt(props.percent) : 0,
-  // });
   return (
     <div className="bar">
       <Spring
@@ -99,13 +92,14 @@ const Bar = (props) => {
 
 function Skills() {
   const [ref, inView] = useInView({
-    threshold: 0.2
+    threshold: 0.2,
+    triggerOnce: true
   });
   const skills = [
     { name: 'HTML5', icon: 'fab fa-html5', percent: 88 },
     { name: 'CSS', icon: 'fab fa-css3', percent: 20 },
     { name: 'NodeJS', icon: 'fab fa-node', percent: 55 },
-    { name: 'React', icon: 'fab fa-react', percent: 45 },
+    { name: 'React', icon: 'fab fa-react', percent: 53 },
     { name: 'Git', icon: 'fab fa-github', percent: 75 },
     { name: 'Canvas', icon: 'fas fa-palette', percent: 90 },
     { name: 'Raster', icon: 'fab fa-adobe', percent: 63 },

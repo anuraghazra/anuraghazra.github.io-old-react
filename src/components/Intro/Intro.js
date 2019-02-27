@@ -24,6 +24,7 @@ const IntroText = () => {
 function Intro() {
   const [ref, inView] = useInView({
     threshold: 0,
+    triggerOnce: true
   });
   const fadeTop = useSpring({
     config: config.gentle,

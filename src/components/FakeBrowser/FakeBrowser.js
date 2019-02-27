@@ -1,9 +1,8 @@
 // @ts-check
 import React, { useState } from 'react';
-
-import LoadingPlaceholder from './LoadingPlaceholder';
+import { useInView } from 'react-intersection-observer';
+import LoadingPlaceholder from '../UI/LoadingPlaceholder';
 import BrowserWindow from './FakeBrowser.style';
-import { useInView } from 'react-intersection-observer'
 
 /**
  * @param {Object} obj
@@ -70,20 +69,11 @@ const Img = ({ isVisible, url, onLoad }) => {
 }
 
 function FakeBrowser(props) {
-  // const [isEntered, setEntered] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [ref, inView] = useInView({
-    /* Optional options */
     threshold: 0,
     triggerOnce: true
   });
-
-
-  // const handleEnter = (event) => {
-  //   if (event.isIntersecting === true) {
-  //     setEntered(event.isIntersecting)
-  //   }
-  // }
 
   const handleLoad = () => {
     setLoaded(true);

@@ -112,6 +112,7 @@ const Project = ({
 
   const props = useSpring({
     config: config.gentle,
+    delay: 0,
     from: {
       opacity: 0,
       transform: 'translateY(100px)'

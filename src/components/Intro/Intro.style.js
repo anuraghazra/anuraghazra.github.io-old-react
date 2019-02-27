@@ -24,6 +24,7 @@ export const IntroWrapper = styled.section`
     font-size: 36px;
     line-height: 15px;
     text-align: left;
+    will-change: transform, opacity;
   }
     
   .intro__text p:nth-child(1) {
@@ -36,6 +37,7 @@ export const IntroWrapper = styled.section`
   }
 
   .avtr-animated {
+    will-change: transform, opacity;
     flex: none;
     margin: auto;
   }

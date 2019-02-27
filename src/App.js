@@ -13,6 +13,7 @@ import CCProjects from './components/CCProjects/CCProjects';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import PageLoader from './components/UI/PageLoader';
 
 import './css/App.css';
 
@@ -29,6 +30,7 @@ const theme = {
 const BGWave = () => {
   return (
     <svg className="bg-wave"
+      fill="white"
       id="wave"
       viewBox="0 0 209.2643 36.755718"
       height="100%"
@@ -48,33 +50,35 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme} className='App'>
-        <Wrapper>
-          <NavBar />
+        <>
+          <Wrapper>
+            {/* <PageLoader /> */}
+            <NavBar />
+            <BGWave />
 
-          <BGWave />
+            <Intro />
 
-          <Intro />
+            <h1 className='sub-title page-title'>My Designs Are</h1>
+            <Porfolio id='portfolio' />
 
-          <h1 className='sub-title page-title'>My Designs Are</h1>
-          <Porfolio id='portfolio' />
+            <h1 className='sub-title page-title'>Side ⚝ Projects</h1>
+            <Projects id='sideprojects' />
 
-          <h1 className='sub-title page-title'>Side ⚝ Projects</h1>
-          <Projects id='sideprojects' />
+            <h1 className='sub-title page-title'>Creative Coding Projects</h1>
+            <CCProjects id='creativecoding' />
 
-          <h1 className='sub-title page-title'>Creative Coding Projects</h1>
-          <CCProjects id='creativecoding' />
+            <h1 className='sub-title page-title'>Concepts</h1>
+            <Concepts id='concepts' />
 
-          <h1 className='sub-title page-title'>Concepts</h1>
-          <Concepts id='concepts' />
+            <h1 className='sub-title page-title'>About</h1>
+            <About id='about' />
 
-          <h1 className='sub-title page-title'>About</h1>
-          <About id='about' />
-
-          <h1 className='sub-title page-title'>Contact</h1>
-          <Contact id='contact' />
+            <h1 className='sub-title page-title'>Contact</h1>
+            <Contact id='contact' />
+          </Wrapper>
 
           <Footer />
-        </Wrapper>
+        </>
       </ThemeProvider>
     );
   }

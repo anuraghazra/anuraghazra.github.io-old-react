@@ -3,12 +3,8 @@ import styled from 'styled-components';
 import media from '../helpers/media.style';
 
 const FooterWrapper = styled.footer`
-  position: absolute;
-  left: 0;
-  right : 0;
-  bottom : 0;
   color : ${props => props.theme.primary};
-
+  border-radius: 0;
   font-size: 1em;
   width : 100%;
   height : auto;
@@ -24,10 +20,9 @@ const FooterWrapper = styled.footer`
 
   div {
     text-align: left;
-    width : 100%;
-
-    
+    width : 100%;    
   }
+
   .madewith {
     text-align: right;
   }

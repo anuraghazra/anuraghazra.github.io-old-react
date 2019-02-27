@@ -82,8 +82,15 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  top: -49%;
+  top: -30%;
   left: 0px;
   fill: white;
   opacity: 0.1
+}
+
+
+@media all and (max-width: 900px) {
+  .bg-wave {
+    display: none;
+  }
 }

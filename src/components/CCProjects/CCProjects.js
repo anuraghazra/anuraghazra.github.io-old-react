@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
-
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { animated, config, useSpring } from "react-spring";
 import FakeBrowser from '../FakeBrowser/FakeBrowser';
 import { GitLinks } from '../Projects/Project';
 import CCWrapper from './CCProjects.style';
-import { useSpring, animated, config } from "react-spring";
-import { useInView } from 'react-intersection-observer';
+
 
 const CCCard = ({ img, demo, src, title }) => {
   const [ref, inView] = useInView({

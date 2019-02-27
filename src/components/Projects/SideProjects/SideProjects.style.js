@@ -16,6 +16,7 @@ const SideProjectsWrapper = styled.section`
     `}
   }
   .single__project {
+    will-change: transform, opacity;
     width: 100%;
     border-radius: 5px;
     margin-top: 3rem;
