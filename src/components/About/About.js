@@ -4,14 +4,13 @@ import media from '../helpers/media.style';
 
 import Avatar from '../UI/Avatar';
 import Skills from './Skills';
-import Contact from '../Contact/Contact';
 
 const AboutWrapper = styled.section`
   color : white;
   text-align: left;
   margin-bottom: 50px;
   height : auto;
-  overflow: auto;
+  overflow-x: hidden;
 
   ${media.tablet`
     text-align: justify;
@@ -44,8 +43,6 @@ function About(props) {
 
       <Skills />
 
-      <h1 className='sub-title page-title'>Contact</h1>
-      <Contact id='contact' />
     </AboutWrapper>
   )
 }

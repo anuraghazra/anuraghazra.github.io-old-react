@@ -11,6 +11,7 @@ import Projects from './components/Projects/index';
 import Concepts from './components/Concepts/Concepts';
 import CCProjects from './components/CCProjects/CCProjects';
 import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 import './css/App.css';
@@ -68,6 +69,9 @@ class App extends Component {
 
           <h1 className='sub-title page-title'>About</h1>
           <About id='about' />
+
+          <h1 className='sub-title page-title'>Contact</h1>
+          <Contact id='contact' />
 
           <Footer />
         </Wrapper>

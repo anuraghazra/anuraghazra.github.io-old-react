@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
 import { Project } from '../Project';
-import SideProjectsWrapper from '../styles/SideProjects.style';
+import SideProjectsWrapper from './SideProjects.style';
 
 
 function SideProjects() {

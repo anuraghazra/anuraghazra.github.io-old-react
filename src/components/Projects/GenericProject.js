@@ -4,7 +4,7 @@ import { Col, Row } from 'react-flexbox-grid';
 import { useInView } from 'react-intersection-observer';
 import { animated, config, useSpring } from "react-spring";
 import FakeBrowser from '../FakeBrowser/FakeBrowser';
-import GenericProjectWrapper from './styles/GenericProject.style';
+import GenericProjectWrapper from './GenericProject.style';
 
 export const IconLink = ({ source, icon }) => {
   return (

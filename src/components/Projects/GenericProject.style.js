@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import FlexWrapper from '../../helpers/FlexWrapper';
+import FlexWrapper from '../helpers/FlexWrapper';
 
 const GenericProjectWrapper = styled(FlexWrapper)`
   color: white;

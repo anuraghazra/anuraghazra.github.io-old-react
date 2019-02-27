@@ -15,7 +15,7 @@ const HexagonWrapper = styled.div`
     outline: 1px solid white;
   }
   .card-title {
-    font-size: 30px;
+    font-size: 1.5rem;
   }
 `;
 
