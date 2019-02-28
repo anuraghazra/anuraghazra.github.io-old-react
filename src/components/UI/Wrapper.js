@@ -8,6 +8,7 @@ export default styled.div`
   text-align: center;
   padding : 0 20px;
   overflow-x : hidden;
+  z-index: -1;
 
   ${media.tablet`
     padding : 0px 10px;
