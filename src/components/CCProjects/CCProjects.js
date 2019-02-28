@@ -5,6 +5,7 @@ import FakeBrowser from '../FakeBrowser/FakeBrowser';
 import { GitLinks } from '../Projects/Project';
 import CCWrapper from './CCProjects.style';
 
+
 const CCCard = ({ img, demo, src, title }) => {
   const [ref, inView] = useInView({
     threshold: 0.2,
