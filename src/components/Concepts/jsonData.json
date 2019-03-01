@@ -3,70 +3,70 @@
     "title": "WebUI Firewatch",
     "brief" : "Design which feels right, this UI template is made for showing that illustrations and vivid colors can make your design look great",
     "links" : {
-      "image" : "./static/img/webui_firewatch.png" 
+      "image" : "./static/img/webui_firewatch_low.jpg" 
     }
   },
   {
     "title": "WebUI Nike",
     "brief" : "Nike Zapatilla Legend is one of the best nike products out there, this ui is simple, minimal and sleek",
     "links" : {
-      "image" : "./static/img/webui_nike.png" 
+      "image" : "./static/img/webui_nike_low.jpg" 
     }
   },
   {
     "title": "WebUI Nature",
     "brief" : "Beauty of Nature, we can you nagative letter spacing to give users a better visual experience and which looks awesome, and provides a sleek and uniqe UI",
     "links" : {
-      "image" : "./static/img/webui_nature.png" 
+      "image" : "./static/img/webui_nature_low.jpg" 
     }
   },
   {
     "title": "WebUI Pagani",
     "brief" : "Who doesn't love Speed, thats why Pagani Huyara comes in to play, combination of speed and customization gives buyers freedom over the super car.",
     "links" : {
-      "image" : "./static/img/webui_pagani.png" 
+      "image" : "./static/img/webui_pagani_low.jpg" 
     }
   },
   {
     "title": "WebUI Harley Devidson",
     "brief" : "Legend of all time Harley Devidson, i created this design which provides users bold look of Harley Devidson V-Rod and all the background illustrations and color contrasts makes the design great.",
     "links" : {
-      "image" : "./static/img/webui_harley.png" 
+      "image" : "./static/img/webui_harley_low.jpg" 
     }
   },
   {
     "title": "Neon Design",
     "brief": "One Of My site which uses css3 animations with great easeing animation gives the user a subtle feedback which improves User Experience",
     "links": {
-      "image": "./static/img/Neon Design-min.png"
+      "image": "./static/img/webui_neondesign_low.jpg"
     }
   },
   {
     "title": "Web Folio",
     "brief": "My Old Portfolio Site. Its Uses SVG Animation For Those Good Looking Animations. And It Uses Highcharts To Make Skill Graphs And Drilldown Mehtod For Making Them Responsive To User",
     "links": {
-      "image": "./static/img/WebDevFolio-min.png"
+      "image": "./static/img/webui_portfolio_low.jpg"
     }
   },
   {
     "title": "Iconic Festivals",
     "brief": "Iconic Festivals is my final year project at Ramakrishna Mission Shilpamandira, I worked hard at a very steep deadline with this project and made this a great responsive mobile friendly website on its own",
     "links": {
-      "image": "./static/img/Final Web Template-min.png"
+      "image": "./static/img/webui_indianfestivals_low.jpg"
     }
   },
   {
     "title": "Save Tigers Template",
     "brief": "One of my web templates which is designed with the mindset of saving bengal tigers in india. and we sould save tigers because if we dont stand for them they will not survive.",
     "links": {
-      "image": "./static/img/SaveTiges-min.jpg"
+      "image": "./static/img/webui_savetigers_low.jpg"
     }
   },
   {
     "title": "GreenVeg.in Template",
     "brief": "GreenVeg.in is a 'Live A Green Life' template focusing on saving nature. this template can be used as a boilerplate to organizations which can make a defference. ",
     "links": {
-      "image": "./static/img/GreenVeg-min.jpg"
+      "image": "./static/img/webui_greenveg_low.jpg"
     }
   }
 ]
