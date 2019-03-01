@@ -53,13 +53,12 @@ function GenericProject({
   children
 }) {
   const [ref, inView] = useInView({
-    threshold: 0.2,
+    threshold: 0.0,
     triggerOnce: true
   });
 
   const props = useSpring({
     config: config.gentle,
-    delay: 300,
     from: {
       opacity: 0,
       transform: 'translateX(-100px)'

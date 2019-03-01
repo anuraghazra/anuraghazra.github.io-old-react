@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import FlexWrapper from '../helpers/FlexWrapper';
+import media from '../helpers/media.style';
 
 const GenericProjectWrapper = styled(FlexWrapper)`
   color: white;
@@ -46,6 +47,19 @@ const GenericProjectWrapper = styled(FlexWrapper)`
   .project__links a:hover {
     color: #242424 !important;
   }
+
+
+  ${media.tablet`
+    .project__info {
+      min-height: auto;
+      margin: 0px;
+      overflow: auto;
+    }
+
+    .project {
+      margin-bottom: 50px;
+    }
+  `}
 `;
 
 export default GenericProjectWrapper;
