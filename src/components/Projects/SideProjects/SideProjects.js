@@ -11,8 +11,8 @@ function SideProjects() {
         title={'EvolutionAquerium'}
         icons={['html', 'css', 'js']}
         tags={['Steering Behavior', 'Genetic Algorithm']}
-        tools={'Vector.js, Candy.js'}
-        langs={'HTML5, CanvasAPI, Javascript'}
+        tools={['Vector.js', 'Candy.js']}
+        langs={['HTML5', 'CanvasAPI', 'Javascript']}
         links={{
           video: 'https://www.youtube.com/embed/GKIhVrOsQCI',
           demo: 'https://anuraghazra.github.io/EvolutionAquerium',
@@ -21,9 +21,9 @@ function SideProjects() {
       >
         <p>
           Evolution Aquerium is based on Craig Reynold's Steering Behaviors and Flocking System. It's also implements Genetic Algorithm and mutations.
-          <br /><br />
+          <br/><br/>
           My Mentor Daniel Shiffman showcased this on his Youtube Channel at TheCodingTrain.
-          <br /><br />
+          <br/><br/>
           And i was very happy about the humble feedback sir Daniel Shiffman gave to me. it just boosted my confidence more and more. and motivated me to make this project better.
         </p>
       </Project>
@@ -32,8 +32,8 @@ function SideProjects() {
         title={'Verlet Drawing'}
         icons={['html', 'css', 'js']}
         tags={['Verlet physics']}
-        langs={'HTML5, CanvasAPI, Javascript'}
-        tools={'Verlet.js, uiu.js'}
+        langs={['HTML5', 'CanvasAPI', 'Javascript']}
+        tools={['Verlet.js', 'uiu.js']}
         links={{
           video: 'https://www.youtube.com/embed/OCZXO8C4zTA',
           demo: 'https://anuraghazra.github.io/VerletDrawing',
@@ -47,15 +47,38 @@ function SideProjects() {
         title={'Classic Logo'}
         icons={['html', 'css', 'js']}
         tags={['LOGO Programming']}
-        tools={'p5js'}
-        langs={'CanvasAPI, Javascript'}
+        tools={['p5js']}
+        langs={['CanvasAPI', 'Javascript']}
         links={{
           video: 'https://www.youtube.com/embed/6pnLnwew68w',
           demo: 'https://anuraghazra.github.io/classicLogo',
           src: 'https://github.com/anuraghazra/classicLogo'
         }}
       >
-        <p>Classic Logo is a LOGO Interpreter Made With HTML5 Canvas. it Implements all of the basic LOGO commands and also repeat command. it also got mentioned in Daniel Shiffman's Youtube Channel TheCodingTrain</p>
+        <p>
+          Classic Logo is a LOGO Interpreter Made With HTML5 Canvas.
+          it Implements all of the basic LOGO commands and also repeat command.
+          it also got mentioned in Daniel Shiffman's Youtube Channel TheCodingTrain
+        </p>
+      </Project>
+
+      <Project
+        title={'QuickerPoll'}
+        icons={['react', 'node', 'server']}
+        tags={['Nodejs', 'React', 'Mongo']}
+        langs={['Javascript', 'Nodejs']}
+        tools={['antDesign', 'mongoose', 'socket.io']}
+        links={{
+          video: 'https://www.youtube.com/embed/10sL4z9BHNE',
+          demo: 'https://quickerpoll.herokuapp.com',
+          src: 'https://github.com/anuraghazra/QuickerPoll'
+        }}
+      >
+        <p>
+          QuickerPoll is a crowd-sourced real-time polling app created with React and Nodejs.
+          QuickerPoll lets you create, edit, update, delete public polls and vote on them publicly.
+          This project is just an example of using react, nodejs and restfull apis all together
+        </p>
       </Project>
 
       <Row>
@@ -65,8 +88,8 @@ function SideProjects() {
             title={'Creative Chat'}
             icons={['html', 'js', 'node']}
             tags={['Nodejs']}
-            tools={'Heroku, Socket.io'}
-            langs={'NodeJS, Express'}
+            tools={['Heroku', 'Socket.io']}
+            langs={['NodeJS', 'Express']}
             links={{
               demo: 'https://creativechat.herokuapp.com',
               src: 'https://github.com/anuraghazra/creativechat'
@@ -82,8 +105,8 @@ function SideProjects() {
             title={'Simple Rockets'}
             icons={['server', 'js', 'node']}
             tags={['NodeJS', 'Multiplayer']}
-            tools={'Heroku, Socket.io'}
-            langs={'NodeJS, Express'}
+            tools={['Heroku', 'Socket.io']}
+            langs={['NodeJS', 'Express']}
             links={{
               demo: 'https://simplerockets.herokuapp.com',
               src: 'https://github.com/anuraghazra/simplerockets'
@@ -99,8 +122,8 @@ function SideProjects() {
             title={'WebGL.js'}
             icons={['html', 'css', 'js']}
             tags={['WebGL', '3D']}
-            langs={'Javascript, WebGL'}
-            tools={'glMatrix.js'}
+            langs={['Javascript', 'WebGL']}
+            tools={['glMatrix.js']}
             links={{
               demo: 'https://anuraghazra.github.io/WebGL.js',
               src: 'https://github.com/anuraghazra/WebGL.js'

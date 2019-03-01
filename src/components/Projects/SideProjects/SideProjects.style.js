@@ -15,6 +15,7 @@ const SideProjectsWrapper = styled.section`
       margin-top: 1rem;
     `}
   }
+  
   .single__project {
     will-change: transform, opacity;
     width: 100%;
@@ -29,6 +30,11 @@ const SideProjectsWrapper = styled.section`
       padding: 5px;
       margin-bottom : 5rem;
     `}
+  }
+
+  .project__techused i {
+    font-size: 24px;
+    margin-right: 30px;
   }
 
   .project__info {
@@ -48,12 +54,21 @@ const SideProjectsWrapper = styled.section`
     list-style-type: none;
     line-height: 40px;
     padding: 0;
+    margin-bottom: 50px;
 
     li {
+      display: flex;
+      align-items: center;
       font-weight: bolder;
-      background: ${props => props.theme.gradDark};
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      div:first-child {
+        text-align: center;
+        margin: 5px 20px 0px 0px;
+        border-radius: 5px;
+        color: ${props => props.theme.secondaryLight};
+        border: 1px solid ${props => props.theme.secondaryLight};
+        width: 30px;
+        font-size: 12px;
+      }
     }
   }
 `;

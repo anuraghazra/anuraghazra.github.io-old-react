@@ -12,12 +12,14 @@ import FakeBrowser from '../FakeBrowser/FakeBrowser';
 const GitLinksWrapper = styled(Row)`
   width: 100%;
   margin-top : 2rem;
-  padding: 5px;
-  border-radius: 5px;
+  padding: 7px 5px;
+  border-radius: 10px;
   border: 1px solid ${props => props.theme.secondaryLight};
+  font-size: 0.8rem;
 
   a {
     color: ${props => props.theme.secondaryLight};
+    transition: 0.2s;
     :hover {
       color: ${props => props.theme.primary};
     }
@@ -54,12 +56,13 @@ const TechUsed = ({ icons }) => {
     icon[icons[i]] = true;
   }
   return (
-    <Row around='xs'>
-      {icon.html && <Col><i className="fab fa-2x fa-html5"></i></Col>}
-      {icon.js && <Col><i className="fab fa-2x fa-js-square"></i></Col>}
-      {icon.css && <Col><i className="fab fa-2x fa-css3"></i></Col>}
-      {icon.node && <Col><i className="fab fa-2x fa-node-js"></i></Col>}
-      {icon.server && <Col><i className="fas fa-2x fa-server"></i></Col>}
+    <Row className="project__techused">
+      {icon.html && <Col><i className="fab fa-html5"></i></Col>}
+      {icon.js && <Col><i className="fab fa-js-square"></i></Col>}
+      {icon.css && <Col><i className="fab fa-css3"></i></Col>}
+      {icon.react && <Col><i className="fab fa-react"></i></Col>}
+      {icon.node && <Col><i className="fab fa-node-js"></i></Col>}
+      {icon.server && <Col><i className="fas fa-server"></i></Col>}
     </Row>
   )
 }
@@ -69,13 +72,24 @@ const Info = ({ children, tags, langs, tools, icons }) => {
     <div className="project__info">
       {children}
       <ul className="side-projects-ul">
-        <li>Implements :
+        <li>
           <div>
-            {tags.map((text, i) => <span key={i} className="tags">{text}</span>)}
+            <i className="fas fa-tags"></i>
           </div>
+          <div>{tags.map((text, i) => <span key={i} className="tags">{text}</span>)}</div>
         </li>
-        <li>Languages : {langs}</li>
-        <li>Tools : {tools}</li>
+        <li>
+          <div>
+            <i className="fas fa-tools"></i>
+          </div>
+          <div>{tools.map((text, i) => <span key={i} className="tags">{text}</span>)}</div>
+        </li>
+        <li>
+          <div>
+            <i className="fas fa-code"></i>
+          </div>
+          <div>{langs.map((text, i) => <span key={i} className="tags">{text}</span>)}</div>
+        </li>
       </ul>
       <TechUsed icons={icons} />
     </div>
@@ -89,9 +103,9 @@ const Info = ({ children, tags, langs, tools, icons }) => {
  * @param {string} props.title 
  * @param {object} props.links 
  * @param {object} props.tags 
- * @param {object} props.langs 
- * @param {object} props.tools 
- * @param {object} props.icons 
+ * @param {array} props.langs 
+ * @param {array} props.tools 
+ * @param {array} props.icons 
  * @param {boolean} props.children 
  * @param {boolean=} props.noVideo
  */

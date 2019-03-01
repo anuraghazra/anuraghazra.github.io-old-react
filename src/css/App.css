@@ -64,18 +64,13 @@
 }
 
 .tags {
+  pointer-events: none;
   padding: 5px 10px;
-  height: 30px;
   margin-right: 10px;
   border-radius: 5px;
-  border: 1px solid #a58fe9;
-  background-color: rgba(255, 255, 255, 0.808);
-  word-wrap: break-word;
-  word-break: keep-all;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: transparent;
   font-size: 12px;
-  color: #a58fe9 !important;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
 }
 
 .bg-wave {
