@@ -9,12 +9,12 @@ export const IntroWrapper = styled.section`
   }
   
   .intro__content {
-    height: 100vh;
-    display : flex;
     width: 100%;
-    margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
     border-bottom: 1px solid white;
-    position: relative;
+    /* position: relative; */
   }
 
   .intro__text {
@@ -87,8 +87,8 @@ export const IntroWrapper = styled.section`
     
     .intro__content {
       width: 100%;
+      padding-top: 15%;
       display: block;
-      padding-top: 60px !important;
     }
     .intro__text {
       text-align: center !important;
