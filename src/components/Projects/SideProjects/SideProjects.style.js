@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import media from '../../helpers/media.style';
 
 const SideProjectsWrapper = styled.section`
-  padding: 0rem;
+  width: 100%;
+  padding: 0;
   margin-bottom: 1rem;
   border-radius: 5px;
   text-align: left;
@@ -17,7 +18,7 @@ const SideProjectsWrapper = styled.section`
   }
   
   .single__project {
-    will-change: transform, opacity;
+    /* will-change: transform, opacity; */
     width: 100%;
     border-radius: 5px;
     margin-top: 3rem;
@@ -48,6 +49,10 @@ const SideProjectsWrapper = styled.section`
       min-height: 100px;
       color: #252525;
     }
+
+    ${media.tablet`
+      margin: 1rem 0rem;
+    `}
   }
 
   .side-projects-ul {
@@ -60,6 +65,7 @@ const SideProjectsWrapper = styled.section`
       display: flex;
       align-items: center;
       font-weight: bolder;
+      
       div:first-child {
         text-align: center;
         margin: 5px 20px 0px 0px;
@@ -67,7 +73,16 @@ const SideProjectsWrapper = styled.section`
         color: ${props => props.theme.secondaryLight};
         border: 1px solid ${props => props.theme.secondaryLight};
         width: 30px;
+        min-width: 30px;
         font-size: 12px;
+      }
+      div:nth-child(2) {
+        flex-wrap: wrap;
+        display: flex;
+        
+        div {
+          height: min-content;
+        }
       }
     }
   }
