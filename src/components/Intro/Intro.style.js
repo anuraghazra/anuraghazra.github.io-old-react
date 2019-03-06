@@ -21,7 +21,7 @@ export const IntroWrapper = styled.section`
     color : white;
     margin: auto;
     font-family: 'Lobster', cursive;
-    font-size: 36px;
+    font-size: 2rem;
     line-height: 15px;
     text-align: left;
     will-change: transform, opacity;
@@ -54,6 +54,10 @@ export const IntroWrapper = styled.section`
     left: 50%;
     position: absolute;
     z-index: 1;
+
+    ${media.tablet`
+      display: none;
+    `}
   }
   .find-more:before {
     content: ' ';

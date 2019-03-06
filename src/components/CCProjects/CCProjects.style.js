@@ -19,7 +19,7 @@ const CCWrapper = styled.div`
     flex-direction: column;
     width: 100%;
     background-color: white;
-    border-radius: 0.25rem;
+    border-radius: 10px;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     &:hover img {

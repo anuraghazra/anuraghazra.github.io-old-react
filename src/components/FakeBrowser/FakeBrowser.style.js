@@ -15,7 +15,7 @@ const BrowserWindow = styled.div`
   max-height: fit-content;
   border-radius: 10px;
   background-color: ghostwhite;
-  box-shadow: 0 5px rgba(0,0,0,0.2); 
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
   overflow: hidden;
   margin: 0 auto;
 
