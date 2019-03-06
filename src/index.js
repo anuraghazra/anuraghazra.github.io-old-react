@@ -1,8 +1,19 @@
+import 'intersection-observer';
+import 'react-app-polyfill/ie9';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+/**
+ * Do feature detection, to figure out which polyfills needs to be imported.
+ **/
+// async function loadPolyfills() {
+//   if (typeof window.IntersectionObserver === 'undefined') {
+//     await import('intersection-observer')
+//   }
+// }
+// loadPolyfills();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

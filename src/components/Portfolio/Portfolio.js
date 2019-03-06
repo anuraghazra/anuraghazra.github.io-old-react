@@ -40,7 +40,8 @@ function Portfolio(props) {
       <Trail
         config={config.gentle}
         delay={300}
-        items={Hexas} keys={item => item.key}
+        items={Hexas}
+        keys={item => item.title}
         from={{
           opacity: 0,
           transform: 'translateY(100px)'
@@ -50,7 +51,7 @@ function Portfolio(props) {
           transform: inView ? "translateY(0px)" : "translateY(100px)"
         }}>
         {(item, index) => props =>
-          <HexagonCard key={index} style={props} icon={item.icon} title={item.title}>
+          <HexagonCard style={props} icon={item.icon} title={item.title}>
             <p>{item.info}</p>
           </HexagonCard>
         }
