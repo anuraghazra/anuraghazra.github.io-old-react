@@ -29,6 +29,27 @@ function SideProjects() {
       </Project>
 
       <Project
+        title={'ShaderExpo'}
+        icons={['html', 'css', 'js']}
+        tags={['WebGL', 'Graphics', 'Editor']}
+        tools={['WebGL', 'glMatrix', 'AceEditor']}
+        langs={['WebGL', 'CanvasAPI', 'Javascript']}
+        links={{
+          video: 'https://www.youtube.com/embed/rtPhA041U4U',
+          demo: 'https://anuraghazra.github.io/ShaderExpo',
+          src: 'https://github.com/anuraghazra/ShaderExpo'
+        }}
+      >
+        <p>
+          ShaderExpo is purely dependency free shader editor made in Raw WebGL API. Experiment with basic webgl shaders on the fly.
+          <br />
+          ShaderExpo Includes rich features like Inline Error Logs, AutoCompletion, Live Editing, Example Shaders etc.
+          <br />
+          ShaderExpo is also mentioned in <a href="https://github.com/sjfricke/awesome-webgl#glsl-editors" className="red">Awesome-Webgl</a>
+        </p>
+      </Project>
+
+      <Project
         title={'Verlet Drawing'}
         icons={['html', 'css', 'js']}
         tags={['Verlet physics']}
@@ -98,6 +119,23 @@ function SideProjects() {
             <p>Creative Chat is a realtime fun chatting app. where users can draw with colors in the canvas and communicate trough art</p>
           </Project>
         </Col>
+        
+        <Col md={12} lg={4}>
+          <Project
+            noVideo
+            title={'Verly.js'}
+            icons={['html', 'css', 'js']}
+            tags={['Verlet', 'Physics', 'Canvas']}
+            langs={['Javascript', 'CanvasAPI', 'HTML5']}
+            tools={['']}
+            links={{
+              demo: 'https://anuraghazra.github.io/Verly.js',
+              src: 'https://github.com/anuraghazra/Verly.js'
+            }}
+          >
+            <p>Verly.js is a successor to my old Verlet.js Physics Engine. Very.js is more simple to use and very modular. Easy to integrate verlet physics engine. </p>
+          </Project>
+        </Col>
 
         <Col xs={12} lg={4}>
           <Project
@@ -116,22 +154,6 @@ function SideProjects() {
           </Project>
         </Col>
 
-        <Col md={12} lg={4}>
-          <Project
-            noVideo
-            title={'WebGL.js'}
-            icons={['html', 'css', 'js']}
-            tags={['WebGL', '3D']}
-            langs={['Javascript', 'WebGL']}
-            tools={['glMatrix.js']}
-            links={{
-              demo: 'https://anuraghazra.github.io/WebGL.js',
-              src: 'https://github.com/anuraghazra/WebGL.js'
-            }}
-          >
-            <p>Creative Chat is a realtime fun chatting app. where users can draw with colors in the canvas and communicate trough art</p>
-          </Project>
-        </Col>
       </Row>
     </SideProjectsWrapper>
   )
