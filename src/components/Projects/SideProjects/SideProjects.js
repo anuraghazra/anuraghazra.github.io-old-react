@@ -48,6 +48,29 @@ function SideProjects() {
           ShaderExpo is also mentioned in <a href="https://github.com/sjfricke/awesome-webgl#glsl-editors" className="red">Awesome-Webgl</a>
         </p>
       </Project>
+      
+      <Project
+        title={'GyroDodge'}
+        icons={['html', 'css', 'js']}
+        tags={['HTML Game']}
+        tools={['p5js', 'p5dom']}
+        langs={['HTML5', 'CanvasAPI', 'Javascript']}
+        links={{
+          video: 'https://www.youtube.com/embed/GdRlkHTMk9c',
+          demo: 'https://anuraghazra.github.io/GyroDodge/',
+          src: 'https://github.com/anuraghazra/GyroDodge'
+        }}
+      >
+        <p>
+          Dodge! Shoot! Win!
+          GyroDodge is a simple gyroscopic mobile game.
+          <br />
+          i used device orientation api to get the alpha, gamma, delta rotations of mobile device and then
+          use it to control the player.
+          <br/>
+          also available on <a href="https://anuraghazra.itch.io/gyrododge">itch.io</a>
+        </p>
+      </Project>
 
       <Project
         title={'Verlet Drawing'}

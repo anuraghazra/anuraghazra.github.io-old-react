@@ -96,14 +96,16 @@ function Skills() {
     triggerOnce: true
   });
   const skills = [
-    { name: 'HTML5', icon: 'fab fa-html5', percent: 88 },
-    { name: 'CSS', icon: 'fab fa-css3', percent: 20 },
+    { name: 'HTML5', icon: 'fab fa-html5', percent: 95 },
+    { name: 'CSS', icon: 'fab fa-css3', percent: 78 },
+    { name: 'WebGL', icon: 'fas fa-mountain', percent: 45 },
     { name: 'NodeJS', icon: 'fab fa-node', percent: 55 },
+    { name: 'Deployment', icon: 'fas fa-server', percent: 67 },
     { name: 'React', icon: 'fab fa-react', percent: 53 },
     { name: 'Git', icon: 'fab fa-github', percent: 75 },
     { name: 'Canvas', icon: 'fas fa-palette', percent: 90 },
     { name: 'Raster', icon: 'fab fa-adobe', percent: 63 },
-    { name: 'Vector', icon: 'fa fa-bezier-curve', percent: 78 },
+    { name: 'Vector', icon: 'fa fa-bezier-curve', percent: 73 },
   ]
 
   const filtered = skills.sort((e, f) => f.percent - e.percent);
