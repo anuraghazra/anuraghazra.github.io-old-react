@@ -1,37 +1,65 @@
 [
   {
+    "title": "AskBuddie Web UI",
+    "brief": "AskBuddie is a tech community growing in nepal. and as a member of the askbuddie i encouraged to design this landing page UI",
+    "links": {
+      "image": "./static/img/webui_askbuddie_site.png"
+    }
+  },
+  {
+    "title": "Mobile Music Player UI",
+    "brief": "Music Player UI made in Figma. Simple, Sleek, Eye Catching",
+    "links": {
+      "image": "./static/img/webui_musicplayer.png"
+    }
+  },
+  {
+    "title": "AskBuddie Forum UI",
+    "brief": "I made this mobile UI in figma which makes the design process very easy. another AskBuddie UI",
+    "links": {
+      "image": "./static/img/webui_askbuddie_forum.png"
+    }
+  },
+  {
+    "title": "WebUI Captain Marvel",
+    "brief": "Captain Marvel UI Design for Marvel Lovers. Made with PS",
+    "links": {
+      "image": "./static/img/webui_captainmarvel_low.jpg"
+    }
+  },
+  {
     "title": "WebUI Firewatch",
-    "brief" : "Design which feels right, this UI template is made for showing that illustrations and vivid colors can make your design look great",
-    "links" : {
-      "image" : "./static/img/webui_firewatch_low.jpg" 
+    "brief": "Design which feels right, this UI template is made for showing that illustrations and vivid colors can make your design look great",
+    "links": {
+      "image": "./static/img/webui_firewatch_low.jpg"
     }
   },
   {
     "title": "WebUI Nike",
-    "brief" : "Nike Zapatilla Legend is one of the best nike products out there, this ui is simple, minimal and sleek",
-    "links" : {
-      "image" : "./static/img/webui_nike_low.jpg" 
+    "brief": "Nike Zapatilla Legend is one of the best nike products out there, this ui is simple, minimal and sleek",
+    "links": {
+      "image": "./static/img/webui_nike_low.jpg"
     }
   },
   {
     "title": "WebUI Nature",
-    "brief" : "Beauty of Nature, we can you nagative letter spacing to give users a better visual experience and which looks awesome, and provides a sleek and uniqe UI",
-    "links" : {
-      "image" : "./static/img/webui_nature_low.jpg" 
+    "brief": "Beauty of Nature, we can you nagative letter spacing to give users a better visual experience and which looks awesome, and provides a sleek and uniqe UI",
+    "links": {
+      "image": "./static/img/webui_nature_low.jpg"
     }
   },
   {
     "title": "WebUI Pagani",
-    "brief" : "Who doesn't love Speed, thats why Pagani Huyara comes in to play, combination of speed and customization gives buyers freedom over the super car.",
-    "links" : {
-      "image" : "./static/img/webui_pagani_low.jpg" 
+    "brief": "Who doesn't love Speed, thats why Pagani Huyara comes in to play, combination of speed and customization gives buyers freedom over the super car.",
+    "links": {
+      "image": "./static/img/webui_pagani_low.jpg"
     }
   },
   {
     "title": "WebUI Harley Devidson",
-    "brief" : "Legend of all time Harley Devidson, i created this design which provides users bold look of Harley Devidson V-Rod and all the background illustrations and color contrasts makes the design great.",
-    "links" : {
-      "image" : "./static/img/webui_harley_low.jpg" 
+    "brief": "Legend of all time Harley Devidson, i created this design which provides users bold look of Harley Devidson V-Rod and all the background illustrations and color contrasts makes the design great.",
+    "links": {
+      "image": "./static/img/webui_harley_low.jpg"
     }
   },
   {
