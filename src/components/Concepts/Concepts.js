@@ -14,7 +14,6 @@ class Concepts extends Component {
 
   handleClick = (e) => {
     if (e.target.tagName === 'IMG') {
-      console.log(e.target.src);
       this.setState({ lightbox_image: e.target.src });
       this.setState((prev) => { return { lightbox_open: !prev.lightbox_open } });
     }
@@ -37,15 +36,19 @@ class Concepts extends Component {
 
         {
           jsonData.map((data, i) => {
+            let sharelink = data.links.dribbble ? 
+            "http://www.facebook.com/sharer.php?u=" + data.links.dribbble :
+            "http://www.facebook.com/sharer.php?u=https://anuraghazra.github.io/" + data.links.image
             return (
               <GenericProject key={i}
                 handleClick={this.handleClick}
                 rowReverse={(i % 2) ? false : true}
                 title={data.title}
-                image={true}
+                image={data.links.image}
                 links={{
-                  demo: data.links.image,
-                  download: data.links.image
+                  demo: data.links.demo,
+                  dribbble: data.links.dribbble,
+                  share: sharelink
                 }}
               >
                 <p>{data.brief}</p>

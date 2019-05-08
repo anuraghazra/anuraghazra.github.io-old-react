@@ -27,6 +27,12 @@ const PanelLinks = (props) => {
       {props.links.demo && (
         <IconLink source={props.links.demo} icon="fas fa-2x fa-window-maximize" />
       )}
+      {props.links.dribbble && (
+        <IconLink source={props.links.dribbble} icon="fab fa-2x fa-dribbble" />
+      )}
+      {props.links.share && (
+        <IconLink source={props.links.share} icon="fas fa-2x fa-share" />
+      )}
     </Row>
   )
 }
@@ -81,8 +87,8 @@ function GenericProject({
           <Col xs={12} md={7}>
             <FakeBrowser
               hideNav={hideNav}
-              image={image}
-              url={links.demo}
+              image={Boolean(image)}
+              url={image ? image : links.demo}
             />
           </Col>
 

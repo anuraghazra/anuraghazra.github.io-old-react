@@ -1,65 +1,92 @@
 [
   {
+    "title": "Nike HyperAce UI",
+    "brief": "Nike hyperace 2 UI Design | nikehyperace.surge.sh is created with Reactjs",
+    "links": {
+      "image": "./static/img/webui_nike_hyperace_low.jpg",
+      "dribbble": "https://dribbble.com/shots/6408956-Nike-HyperAce2-UI-Design",
+      "demo": "https://nikehyperace.surge.sh"
+    }
+  },
+  {
+    "title": "Motionjs UI ",
+    "brief": "Elegant UI Design for a concept javascript animation library | Illustrations are taken from undraw.co",
+    "links": {
+      "image": "./static/img/webui_motionjs_low.jpg",
+      "dribbble": "https://dribbble.com/shots/6387522-Modern-Web-UI"
+    }
+  },
+  {
     "title": "AskBuddie Web UI",
     "brief": "AskBuddie is a tech community growing in nepal. and as a member of the askbuddie i encouraged to design this landing page UI",
     "links": {
-      "image": "./static/img/webui_askbuddie_site.png"
+      "image": "./static/img/webui_askbuddie_site.png",
+      "dribbble": "https://dribbble.com/shots/6451521-AskBuddie-Web-UI"
     }
   },
   {
     "title": "Mobile Music Player UI",
     "brief": "Music Player UI made in Figma. Simple, Sleek, Eye Catching",
     "links": {
-      "image": "./static/img/webui_musicplayer.png"
+      "image": "./static/img/webui_musicplayer.png",
+      "dribbble": "https://dribbble.com/shots/6367705-Music-Player-UI"
     }
   },
   {
     "title": "AskBuddie Forum UI",
     "brief": "I made this mobile UI in figma which makes the design process very easy. another AskBuddie UI",
     "links": {
-      "image": "./static/img/webui_askbuddie_forum.png"
+      "image": "./static/img/webui_askbuddie_forum.png",
+      "dribbble": "https://dribbble.com/shots/6451532-AskBuddie-Mobile-UI"
     }
   },
   {
     "title": "WebUI Captain Marvel",
     "brief": "Captain Marvel UI Design for Marvel Lovers. Made with PS",
     "links": {
-      "image": "./static/img/webui_captainmarvel_low.jpg"
+      "image": "./static/img/webui_captainmarvel_low.jpg",
+      "dribbble": "https://dribbble.com/shots/6367700-Captain-Marvel-UI"
     }
   },
   {
     "title": "WebUI Firewatch",
     "brief": "Design which feels right, this UI template is made for showing that illustrations and vivid colors can make your design look great",
     "links": {
-      "image": "./static/img/webui_firewatch_low.jpg"
+      "image": "./static/img/webui_firewatch_low.jpg",
+      "dribbble": "https://dribbble.com/shots/6451540-Fire-Watch-UI"
     }
   },
   {
     "title": "WebUI Nike",
     "brief": "Nike Zapatilla Legend is one of the best nike products out there, this ui is simple, minimal and sleek",
     "links": {
-      "image": "./static/img/webui_nike_low.jpg"
+      "image": "./static/img/webui_nike_low.jpg",
+      "dribbble": "https://dribbble.com/shots/6451547-Nike-Zapatilla-UI"
     }
   },
   {
     "title": "WebUI Nature",
     "brief": "Beauty of Nature, we can you nagative letter spacing to give users a better visual experience and which looks awesome, and provides a sleek and uniqe UI",
     "links": {
-      "image": "./static/img/webui_nature_low.jpg"
+      "image": "./static/img/webui_nature_low.jpg",
+      "dribbble": "https://dribbble.com/shots/6367693-Nature-UI"
     }
   },
   {
     "title": "WebUI Pagani",
     "brief": "Who doesn't love Speed, thats why Pagani Huyara comes in to play, combination of speed and customization gives buyers freedom over the super car.",
     "links": {
-      "image": "./static/img/webui_pagani_low.jpg"
+      "image": "./static/img/webui_pagani_low.jpg",
+      "dribbble": "https://dribbble.com/shots/6367673-Pagani-Huayra-UI"
     }
   },
   {
     "title": "WebUI Harley Devidson",
     "brief": "Legend of all time Harley Devidson, i created this design which provides users bold look of Harley Devidson V-Rod and all the background illustrations and color contrasts makes the design great.",
     "links": {
-      "image": "./static/img/webui_harley_low.jpg"
+      "image": "./static/img/webui_harley_low.jpg",
+      "dribbble": "https://dribbble.com/shots/6367654-Harley-Davidson-UI",
+      "demo": "http://harleydavidson.surge.sh"
     }
   },
   {
@@ -81,20 +108,6 @@
     "brief": "Iconic Festivals is my final year project at Ramakrishna Mission Shilpamandira, I worked hard at a very steep deadline with this project and made this a great responsive mobile friendly website on its own",
     "links": {
       "image": "./static/img/webui_indianfestivals_low.jpg"
-    }
-  },
-  {
-    "title": "Save Tigers Template",
-    "brief": "One of my web templates which is designed with the mindset of saving bengal tigers in india. and we sould save tigers because if we dont stand for them they will not survive.",
-    "links": {
-      "image": "./static/img/webui_savetigers_low.jpg"
-    }
-  },
-  {
-    "title": "GreenVeg.in Template",
-    "brief": "GreenVeg.in is a 'Live A Green Life' template focusing on saving nature. this template can be used as a boilerplate to organizations which can make a defference. ",
-    "links": {
-      "image": "./static/img/webui_greenveg_low.jpg"
     }
   }
 ]
