@@ -63,7 +63,7 @@ function Contact(props) {
       <div className="social-links">
         <a href="mailto:hazru.anurag@gmail.com"><Hexagon icon={'fa fa-2x fa-at'} />hazru.anurag@gmail.com</a>
         <a href="https://twitter.com/anuraghazru"><Hexagon icon={'fab fa-2x fa-twitter'} />#anuraghazru</a>
-        <a href="https://facebook.com/anuragh4zra"><Hexagon icon={'fab fa-2x fa-facebook'} />/anuragh4zra</a>
+        <a href="https://www.facebook.com/anuhzra"><Hexagon icon={'fab fa-2x fa-facebook'} />/anuragh4zra</a>
         <a href="https://instagram.com/anuraghazru"><Hexagon icon={'fab fa-2x fa-instagram'} />/anuraghazru</a>
       </div>
 
