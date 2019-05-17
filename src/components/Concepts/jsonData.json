@@ -9,6 +9,22 @@
     }
   },
   {
+    "title": "Mother's Day Special",
+    "brief": "On this special mother's day i made this design. which shows that simple Typography and design can make a great impact on users",
+    "links": {
+      "image": "./static/img/webui_mothersday_low.jpg",
+      "dribbble": "https://dribbble.com/shots/6471582-Mother-s-Day-Special-UI-Design"
+    }
+  },
+  {
+    "title": "Rabindranath Tagore UI Design",
+    "brief": "Rabindra joyanti special UI design | minimal elegant design showcasing simplicity is the key element in any design",
+    "links": {
+      "image": "./static/img/webui_rabindranath_low.jpg",
+      "dribbble": "https://dribbble.com/shots/6457414-Rabindranath-Tagore-UI-Design"
+    }
+  },
+  {
     "title": "Motionjs UI ",
     "brief": "Elegant UI Design for a concept javascript animation library | Illustrations are taken from undraw.co",
     "links": {
