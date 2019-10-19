@@ -68,10 +68,6 @@ class Lightbox extends Component {
     this.overlay.current.removeEventListener('touchmove', this.preventScrolling);
   }
 
-  closeLightBox = () => {
-    this.props.handleClose();
-  };
-
   render() {
     return (
       <LightboxWrapper position={this.state.position} ref={this.overlay}>
@@ -79,7 +75,7 @@ class Lightbox extends Component {
           <div className='gestureArea' ref={this.gestureArea}>
             <img ref={this.overlayImg} src={this.props.image} alt='' />
           </div>
-          <p onClick={this.closeLightBox} className='close'>
+          <p onClick={this.props.handleClose} className='close'>
             <i className='fas fa-2x fa-times-circle' />
           </p>
         </div>

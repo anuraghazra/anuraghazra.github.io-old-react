@@ -60,7 +60,7 @@ function CCProjects({ id }) {
           return (<CCCard key={i} {...data} />)
         })
       }
-      {isError && <h3 className='error'>Somehting Went Wrong! Please Reload the Page</h3>}
+      {isError && <h3 className='error'>Something Went Wrong! Please Reload the Page</h3>}
     </CCWrapper>
   )
 }

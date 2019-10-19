@@ -96,7 +96,7 @@ function FakeBrowser(props) {
       {!props.hideNav && <FakeNav />}
       {(inView && (!loaded)) && <LoadingPlaceholder />}
 
-      <div ref={ref}>
+      <div ref={ref} style={{width: '1%'}}>
         {component}
       </div>
     </BrowserWindow>
